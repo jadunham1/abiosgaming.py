@@ -25,13 +25,12 @@ class AbiosClient(object):
         adapter = HTTPAdapter(max_retries=retry)
         self.session.mount(self._endpoint, adapter)
 
- 
     @property
     def _get_access_token(self):
         return "u8vhWfs07Y7PuhdSJAqyPYKbDAHsZdNKW6Df9WYJ";
 
     def _build_url(self, path):
-        return '/'.join([self._endpoint] + path)         
+        return '/'.join([self._endpoint] + path)
 
     def _call(self, url, response_type='iter', **parameters):
         response_types = ('iter', 'json')
@@ -65,8 +64,6 @@ class AbiosClient(object):
         url = self._build_url(path)
         parameters = {'access_token': self._get_access_token, 'with[]': ['tournament', 'matchups']}
         return self._call(url, **parameters)
-        
-        
 
 
 abios = AbiosClient()
