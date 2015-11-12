@@ -1,6 +1,6 @@
 import sys
 print sys.path
-import abiosgaming
+from abiosgaming.client import AbiosClient
 
 def test_abios():
-    client = abiosgaming.AbiosClient()
+    client = AbiosClient()
