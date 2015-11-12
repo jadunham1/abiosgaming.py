@@ -24,7 +24,7 @@ class BaseAbiosClient(object):
         self.session.mount(self._endpoint, adapter)
 
     @property
-    def _get_access_token(self):
+    def access_token(self):
         return "u8vhWfs07Y7PuhdSJAqyPYKbDAHsZdNKW6Df9WYJ";
 
     def _build_url(self, path):
@@ -60,5 +60,5 @@ class BaseAbiosClient(object):
     def _get_matches(self, parameters):
         path = ['v1', 'matches']
         url = self._build_url(path)
-        parameters['access_token'] = self._get_access_token
+        parameters['access_token'] = self.access_token
         return self._call(url, **parameters)
