@@ -66,7 +66,8 @@ class AbiosClient(object):
         return self._call(url, **parameters)
 
 
-abios = AbiosClient()
-matches = abios._get_matches()
+if __name__ == '__main__':
+    abios = AbiosClient()
+    matches = abios._get_matches()
 
-print matches[0]
+    print matches[0]
