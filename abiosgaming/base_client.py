@@ -90,7 +90,7 @@ class BaseAbiosClient(object):
         data = response.json()
         final_data = []
         for item in data:
-            final_data.append(namedtuple_from_mapping(item))
+            final_data.append(named_tuple(item))
         return final_data
 
     def _get_next_page(self):
