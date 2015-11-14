@@ -11,6 +11,14 @@ class AbiosClient(BaseAbiosClient):
                             ):
         return self._get_matches({"with[]": addons, "games[]": games, "starts_after": "now", "sort": sort}, count=count)
 
+    def get_current_matches(self,
+                            count=3,
+                            addons=[],
+                            games=[],
+                            sort='ASC'
+                           ):
+        return self._get_matches({"with[]": addons, "games[]": games, "starts_before": "now", "ends_after": "now", "sort": sort}, count=count)
+
     def get_games(self,
                   order="id",
                   sort="ASC"):

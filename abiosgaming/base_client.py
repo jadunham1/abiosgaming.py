@@ -97,18 +97,24 @@ class BaseAbiosClient(object):
         if(self.next_page):
             logging.debug("Calling the next URL: {}".format(self.next_page))
             return self._call(self.next_page)
-        raise PaginationNotFound 
+        raise PaginationNotFound
 
     def _paginated_call(self, url, item_count=3, **parameters):
+        self.pagination_max_items = False
+        self.pagination_remainder = []
         logging.debug("I'm looking for {} items".format(item_count))
         data = self._call(url, **parameters)
         assert isinstance(data, list)
         logging.debug(len(data))
         while( len(data) < item_count ):
             logging.debug("Calling next page")
-            data.extend(self._get_next_page())
+            try:
+                data.extend(self._get_next_page())
+            except PaginationNotFound:
+                self.pagination_max_items = True
+                break
             logging.debug("Data size is now {}".format(len(data)))
-
+        self.pagination_remainder = data[item_count:]
         return data[:item_count]
 
     def _get_matches(self, parameters, count=3):
