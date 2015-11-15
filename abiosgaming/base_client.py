@@ -59,8 +59,37 @@ class BaseAbiosClient(object):
         except AttributeError:
             pass
 
+    def refresh_access_token(self):
+        path = ['v1', 'oauth', 'access_token']
+        url = self._build_url(path)
+        data = {}
+        response = self._post(url, data)
+        logging.info(response)
+
+    def get_auth_parameters(self):
+        client_id, secret = self.get_credential_set()
+
+    def get_credential_set(self):
+        return ('vhVlOflCSOLjMyzAd5eGM7PScyfvIM6TptTCC7Y0', 'IROG0RVhB2mkIwdvoCjHJ8IOks9lDKbFXB6IeDe0')
+
     def _build_url(self, path):
         return '/'.join([self._endpoint] + path)
+
+    def _post(self, url, data):
+        try:
+            response = self.session.post(url,
+                                         data=data,
+                                         verify=True)
+        except MaxRetryError as e:
+            logging.exception(e)
+            raise e
+
+        try:
+            response.raise_for_status()
+        except HTTPError as e:
+            logging.exception(e)
+            raise e
+        return response.json
 
     def _call(self, url, **parameters):
         del self.next_page
