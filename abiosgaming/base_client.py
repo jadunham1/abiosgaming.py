@@ -1,8 +1,6 @@
-import json
 import logging
-import os.path
 import requests
-from requests.exceptions import HTTPError, ConnectionError
+from requests.exceptions import HTTPError
 from urllib3.util import Retry
 from requests.adapters import HTTPAdapter
 from urllib3.exceptions import MaxRetryError
@@ -11,7 +9,7 @@ import collections
 
 DEFAULT_ENDPOINT = 'https://api.abiosgaming.com'
 DEFAULT_VERSION = 'v1'
-logging.basicConfig(level=logging.DEBUG)
+
 
 def named_tuple(mapping):
     if (isinstance(mapping, collections.Mapping)):
@@ -20,9 +18,11 @@ def named_tuple(mapping):
         return namedtuple_from_mapping(mapping)
     return mapping
 
+
 def namedtuple_from_mapping(mapping, name="NamedTuple"):
     this_namedtuple_maker = collections.namedtuple(name, mapping.iterkeys())
     return this_namedtuple_maker(**mapping)
+
 
 class BaseAbiosClient(object):
     def __init__(self, retries=3):
@@ -38,7 +38,7 @@ class BaseAbiosClient(object):
 
     @property
     def access_token(self):
-        return "u8vhWfs07Y7PuhdSJAqyPYKbDAHsZdNKW6Df9WYJ";
+        return "u8vhWfs07Y7PuhdSJAqyPYKbDAHsZdNKW6Df9WYJ"
 
     @property
     def next_page(self):
@@ -87,11 +87,7 @@ class BaseAbiosClient(object):
             logging.exception(e)
             raise e
 
-        data = response.json()
-        final_data = []
-        for item in data:
-            final_data.append(named_tuple(item))
-        return final_data
+        return [named_tuple(item) for item in response.json()]
 
     def _get_next_page(self):
         if(self.next_page):
@@ -106,7 +102,7 @@ class BaseAbiosClient(object):
         data = self._call(url, **parameters)
         assert isinstance(data, list)
         logging.debug(len(data))
-        while( len(data) < item_count ):
+        while(len(data) < item_count):
             logging.debug("Calling next page")
             try:
                 data.extend(self._get_next_page())
@@ -115,10 +111,20 @@ class BaseAbiosClient(object):
                 break
             logging.debug("Data size is now {}".format(len(data)))
         self.pagination_remainder = data[item_count:]
-        return data[:item_count]
+        return [named_tuple(item) for item in data[:item_count]]
 
     def _get_matches(self, parameters, count=3):
         path = ['v1', 'matches']
+        url = self._build_url(path)
+        return self._paginated_call(url, item_count=count, **parameters)
+
+    def _get_tournaments(self, parameters, count=3):
+        path = ['v1', 'tournaments']
+        url = self._build_url(path)
+        return self._paginated_call(url, item_count=count, **parameters)
+
+    def _get_competitors(self, parameters, count=3):
+        path = ['v1', 'competitors']
         url = self._build_url(path)
         return self._paginated_call(url, item_count=count, **parameters)
 
