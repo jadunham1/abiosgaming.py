@@ -1,6 +1,4 @@
-#!/usr/bin/python2.7
-
-from base_client import BaseAbiosClient
+from .base_client import BaseAbiosClient
 
 
 class AbiosClient(BaseAbiosClient):

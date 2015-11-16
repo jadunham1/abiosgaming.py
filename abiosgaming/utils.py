@@ -14,7 +14,7 @@ def named_tuple(mapping):
     :rtype: collections.namedtuple of collections.namedtuple
     """
     if (isinstance(mapping, collections.Mapping)):
-        for key, value in mapping.iteritems():
+        for key, value in mapping.items():
             mapping[key] = named_tuple(value)
         return namedtuple_from_mapping(mapping)
     return mapping
@@ -27,5 +27,5 @@ def namedtuple_from_mapping(mapping, name="NamedTuple"):
     :param mapping: mapping to be converted to namedtuple
     :rtype: namedtuple
     """
-    this_namedtuple_maker = collections.namedtuple(name, mapping.iterkeys())
+    this_namedtuple_maker = collections.namedtuple(name, mapping.keys())
     return this_namedtuple_maker(**mapping)

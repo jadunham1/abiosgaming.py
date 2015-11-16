@@ -4,7 +4,7 @@ from requests.exceptions import HTTPError
 from urllib3.util import Retry
 from requests.adapters import HTTPAdapter
 from urllib3.exceptions import MaxRetryError
-from exceptions import PaginationNotFound
+from .exceptions import PaginationNotFound
 from .utils import named_tuple
 
 DEFAULT_ENDPOINT = 'https://api.abiosgaming.com'
