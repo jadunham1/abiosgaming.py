@@ -5,23 +5,10 @@ from urllib3.util import Retry
 from requests.adapters import HTTPAdapter
 from urllib3.exceptions import MaxRetryError
 from exceptions import PaginationNotFound
-import collections
+from .utils import named_tuple
 
 DEFAULT_ENDPOINT = 'https://api.abiosgaming.com'
 DEFAULT_VERSION = 'v1'
-
-
-def named_tuple(mapping):
-    if (isinstance(mapping, collections.Mapping)):
-        for key, value in mapping.iteritems():
-            mapping[key] = named_tuple(value)
-        return namedtuple_from_mapping(mapping)
-    return mapping
-
-
-def namedtuple_from_mapping(mapping, name="NamedTuple"):
-    this_namedtuple_maker = collections.namedtuple(name, mapping.iterkeys())
-    return this_namedtuple_maker(**mapping)
 
 
 class BaseAbiosClient(object):
@@ -35,10 +22,15 @@ class BaseAbiosClient(object):
         )
         adapter = HTTPAdapter(max_retries=retry)
         self.session.mount(self._endpoint, adapter)
+        self._access_token = None
 
     @property
     def access_token(self):
-        return "u8vhWfs07Y7PuhdSJAqyPYKbDAHsZdNKW6Df9WYJ"
+        if not self._access_token:
+            logging.debug("Refreshing access token")
+            self._access_token = self.refresh_access_token()
+
+        return self._access_token
 
     @property
     def next_page(self):
@@ -62,15 +54,24 @@ class BaseAbiosClient(object):
     def refresh_access_token(self):
         path = ['v1', 'oauth', 'access_token']
         url = self._build_url(path)
-        data = {}
+        data = self._get_auth_parameters()
         response = self._post(url, data)
         logging.info(response)
+        return response['access_token']
 
-    def get_auth_parameters(self):
+    def _get_auth_parameters(self):
         client_id, secret = self.get_credential_set()
+        post_data = {
+            'grant_type': 'client_credentials',
+            'client_id': client_id,
+            'client_secret': secret,
+        }
+        return post_data
 
     def get_credential_set(self):
-        return ('vhVlOflCSOLjMyzAd5eGM7PScyfvIM6TptTCC7Y0', 'IROG0RVhB2mkIwdvoCjHJ8IOks9lDKbFXB6IeDe0')
+        client_id = 'vhVlOflCSOLjMyzAd5eGM7PScyfvIM6TptTCC7Y0'
+        client_secret = 'IROG0RVhB2mkIwdvoCjHJ8IOks9lDKbFXB6IeDe0'
+        return (client_id, client_secret)
 
     def _build_url(self, path):
         return '/'.join([self._endpoint] + path)
@@ -89,7 +90,7 @@ class BaseAbiosClient(object):
         except HTTPError as e:
             logging.exception(e)
             raise e
-        return response.json
+        return response.json()
 
     def _call(self, url, **parameters):
         del self.next_page

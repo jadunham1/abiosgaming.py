@@ -1,0 +1,225 @@
+interactions:
+- request:
+    body: grant_type=client_credentials&client_id=vhVlOflCSOLjMyzAd5eGM7PScyfvIM6TptTCC7Y0&client_secret=IROG0RVhB2mkIwdvoCjHJ8IOks9lDKbFXB6IeDe0
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['135']
+      Content-Type: [application/x-www-form-urlencoded]
+      User-Agent: [python-requests/2.8.1]
+    method: POST
+    uri: https://api.abiosgaming.com/v1/oauth/access_token
+  response:
+    body: {string: !!python/unicode '{"access_token":"O1ER2s887M0sYa5zOf8f5TuLd4s60OYQThi5rFmh","token_type":"Bearer","expires_in":31556952}'}
+    headers:
+      accept-ranges: [bytes]
+      access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
+      access-control-allow-origin: ['*']
+      access-control-expose-headers: [Link]
+      age: ['0']
+      cache-control: [no-cache]
+      connection: [keep-alive]
+      content-length: ['103']
+      content-type: [application/json]
+      date: ['Mon, 16 Nov 2015 02:41:29 GMT']
+      server: [nginx/1.4.6 (Ubuntu)]
+      via: [1.1 varnish]
+      x-powered-by: [PHP/5.5.9-1ubuntu4.11]
+      x-varnish: ['1467459732']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.8.1]
+    method: GET
+    uri: https://api.abiosgaming.com/v1/tournaments?access_token=O1ER2s887M0sYa5zOf8f5TuLd4s60OYQThi5rFmh
+  response:
+    body: {string: !!python/unicode '[{"id":777,"title":"Enthusiast Gaming Live Expo","start":"2016-04-29T00:00:00+0000","end":"2016-05-01T23:59:00+0000","city":"Toronto","short_title":"EGLX","url":"https:\/\/abiosgaming.com\/tournaments\/Smash\/Enthusiast-Gaming-Live-Expo","description":"The
+        Enthusiast Gaming Live Expo is a follow-up of sorts to the first \"Enthusiast
+        Gaming Live\" event of 2015. This time around, however, a number of major
+        sponsors and backers have come together to make EGLX one of the biggest eSports
+        events in North American history. A classic gaming convention at its'' core,
+        the event will also feature 25+ separate eSports tournaments, with over $
+        100,000 in total prize pools spread across them.For the Super Smash Bros.
+        portion of the tournaments, Melee and Smash 4 Wii U will be the headlining
+        games, featuring a total collective prize pool of $ 33,000. Both games will
+        have a Singles (1v1) tournament with a $ 15,000 pot, and a Doubles (2v2) tournament
+        with a $ 1,500 pot.With such massive prize pools and the building hype around
+        the event, some of the largest names (Leffen, Hungrybox and Mew2King to name
+        a few) in the Smash scene have already confirmed their upcoming attendance.","short_description":"EGLX
+        is going to be one of the biggest eSports events in North American history.
+        The Smash portion will feature a prize total of $ 33,000.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/EGLX-Large-new.jpeg","default":"https:\/\/img.abiosgaming.com\/events\/EGLX-Small-new.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/EGLX-Small-new.png"},"prizepool":{"total":"$
+        33,000, $ 15,000","first":"$ 6,750","second":"$ 3,300","third":"$ 1,650"},"links":{"website":"http:\/\/eglx.ca\/","wiki":"http:\/\/wiki.teamliquid.net\/smash\/Enthusiast_Gaming_Live_Expo","youtube":"https:\/\/www.youtube.com\/watch?v=FqL_fIrcCd4"},"game":{"id":10,"title":"Smash","long_title":"Super
+        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}}},{"id":836,"title":"BEAST
+        6","start":"2016-02-19T00:00:00+0000","end":"2016-02-21T23:59:00+0000","city":"Gothenburg","short_title":"B6","url":"https:\/\/abiosgaming.com\/tournaments\/Smash\/BEAST-6","description":"As
+        one of Europe''s Premier Super Smash Bros. Tournament series, Beast returns
+        for a 6th iteration. Having evolved into the much more organized Beast Tournament
+        Series, an amazing Smash experience is to be expected.The event is being held
+        in the Eriksbergshallen, which features a 1500m2 area, in Gothenburg, Sweden.
+        Both Melee and Smash 4 Wii U are getting Singles and Doubles tournaments,
+        and Project M will be having a Singles event.","short_description":"As one
+        of Europe''s Premier Super Smash Bros. Tournament series, Beast returns for
+        a 6th iteration.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/Beast-6-Logo-Large.jpeg","default":"https:\/\/img.abiosgaming.com\/events\/Beast-6-Logo-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/Beast-6-Logo-Small.png"},"prizepool":{"total":"TBA","first":"TBA","second":"TBA","third":"TBA"},"links":{"website":"http:\/\/beast-series.com\/beast\/info\/","wiki":"","youtube":""},"game":{"id":10,"title":"Smash","long_title":"Super
+        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}}},{"id":835,"title":"Genesis
+        3","start":"2016-01-15T00:00:00+0000","end":"2016-01-17T23:59:00+0000","city":"San
+        Jose","short_title":"G3","url":"https:\/\/abiosgaming.com\/tournaments\/Smash\/Genesis-3","description":"After
+        failed attempts at resuscitating the Genesis tournament series in 2013 and
+        2014, the legendary Super Smash Bros. premier event that sparked one of the
+        most intense rivalries in Smash history is returning in January&nbsp;2016
+        with Genesis 3.&nbsp;As one of the most talked about and hyped Smash \"Super
+        Major\" tournaments of all time, Genesis 3 is looking to break records with
+        both Singles and Doubles tournaments in Melee, Smash Wii U AND Smash 64. The
+        tournament currently has 1300+ registered players according to the Smash.GG
+        tournament page, and is steadily growing.Witness Smash history as the tied
+        set between Mang0 and Armada might come to a conclusion.","short_description":"The
+        legendary Smash premier event (Genesis 3) that sparked one of the most intense
+        rivalries in Smash history is returning in January 2016.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/Genesis-3-Smash-Large.jpeg","default":"https:\/\/img.abiosgaming.com\/events\/Genesis-3-Smash-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/Genesis-3-Smash-Small.png"},"prizepool":{"total":"TBA","first":"TBA","second":"TBA","third":"TBA"},"links":{"website":"https:\/\/smash.gg\/tournament\/genesis-3","wiki":"http:\/\/wiki.teamliquid.net\/smash\/GENESIS_3","youtube":"https:\/\/www.youtube.com\/watch?v=VMCMg-ziBEc"},"game":{"id":10,"title":"Smash","long_title":"Super
+        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}}},{"id":899,"title":"The
+        Iceberg Pro League S1","start":"2015-12-20T00:00:00+0000","end":"2015-11-16T02:41:29+0000","city":"Online\/Offline","short_title":"ICPL
+        S1","url":"https:\/\/abiosgaming.com\/tournaments\/CS%3AGO\/The-Iceberg-Pro-League-S1","description":"ICPL
+        Is a new league in Asia for CSGO with an $ 4,000 Prize-Pool. The Iceberg Pro
+        League will be played in three stages starting with an open group stage consisting
+        of 16 teams, the top teams from each group will advance to the ''''survival
+        challenge'''' where the four group winners will match up to four invited teams
+        after a random draw, with the winners of each match qualifying for the LAN
+        Finals in Hong Kong.","short_description":"ICPL Is a new league in Asia for
+        CSGO with an $ 4,000 Prize-Pool.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/Iceberg-Pro-League-Large.png","default":"https:\/\/img.abiosgaming.com\/events\/Iceberg-Pro-League-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/Iceberg-Pro-League-Small.png"},"prizepool":{"total":"$
+        4,000","first":"$ 2,000","second":"$ 1,000","third":"$ 500"},"links":{"website":"","wiki":"","youtube":""},"game":{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
+        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}}},{"id":771,"title":"Ossom
+        Fights 2015","start":"2015-12-11T00:00:00+0000","end":"2015-12-13T23:59:00+0000","city":"Barcelona","short_title":"Ossom","url":"https:\/\/abiosgaming.com\/tournaments\/Smash\/Ossom-Fights-2015","description":"A
+        year after the latest Smash Major event in Spain, \u00d3ssom Fights 2015 is
+        looking to bring back the hype of the FGC scene with a three-day event this
+        December. The Smash games featured will be Melee ( Singles &amp; Doubles )
+        and Project M ( Singles only ).The Event will be part of the European Smash
+        Circuit of 2015, and will bring in many of Europe''s top Smashers for a weekend
+        of intense Smash.","short_description":"A year after the latest Smash Major
+        event in Spain, \u00d3ssom Fights 2015 is looking to bring back the hype of
+        the FGC scene to Southern Europe.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/Ossom-Fights-2015-Large.jpeg","default":"https:\/\/img.abiosgaming.com\/events\/Ossom-Fights-2015-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/Ossom-Fights-2015-Small.png"},"prizepool":{"total":"TBD","first":"50
+        %","second":"24 %","third":"12 %"},"links":{"website":"https:\/\/smash.gg\/ossom-fights","wiki":"","youtube":"https:\/\/www.youtube.com\/watch?v=sNIyaobXtK4"},"game":{"id":10,"title":"Smash","long_title":"Super
+        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}}},{"id":773,"title":"DG
+        Winter","start":"2015-12-05T00:00:00+0000","end":"2015-12-06T23:59:00+0000","city":"Dortmund","short_title":"DGW","url":"https:\/\/abiosgaming.com\/tournaments\/Smash\/DG-Winter","description":"DG
+        Winter, a new tournament IP from Donkey Gaming, is launching this December
+        with a 2-Day Smash event in Dortmund, Germany, featuring Doubles and Singles
+        tourneys in both Melee and Smash 4.&nbsp;With the current explosion in Smash
+        as an esport, a multitude of Circuit tournaments have been popping up all
+        across Europe, and DGSmash is looking to give Germany a new yearly event.","short_description":"DG
+        Winter, a new tournament IP from Donkey Gaming is launching this December
+        with a 2-Day Smash event in Dortmund, Germany.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/DG-Winter-Large.jpeg","default":"https:\/\/img.abiosgaming.com\/events\/DG-Winter-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/DG-Winter-Small.png"},"prizepool":{"total":"TBD","first":"50
+        %","second":"30 %","third":"15 %"},"links":{"website":"http:\/\/smasheurope.com\/tournament\/dgwinter\/","wiki":"","youtube":""},"game":{"id":10,"title":"Smash","long_title":"Super
+        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}}},{"id":892,"title":"Northern
+        Arena","start":"2015-12-05T00:00:00+0000","end":"2015-12-06T00:00:00+0000","city":"Toronto","short_title":"NA","url":"https:\/\/abiosgaming.com\/tournaments\/CS%3AGO\/Northern-Arena","description":"Northen
+        Arena is an offline tournament that will be held in connection to the Canadian
+        Videogame Awards.&nbsp;The tournament will feature eight top teams from North
+        America and a $ 20,000 Prize PoolThe North Arena event will be held during
+        the CVA FanFest on December 5th and 6th at the Mattamy Athletic center and
+        will be cast by \"launders\" and \"Vansilli\".","short_description":"Northen
+        Arena is an offline tournament that will be held in connection to the Canadian
+        Videogame Awards. ","images":{"large":"https:\/\/img.abiosgaming.com\/events\/Canadian-Videogame-Awards-cva-big.jpg","default":"https:\/\/img.abiosgaming.com\/events\/Canadian-Videogame-Awards-cva-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/Canadian-Videogame-Awards-cva-small.png"},"prizepool":{"total":"$
+        20,000","first":"$ 10,000","second":"$ 5,000","third":"$ 2,500"},"links":{"website":"http:\/\/www.cvawards.ca\/northern-arena-2015\/","wiki":"http:\/\/wiki.teamliquid.net\/counterstrike\/Nothern_Arena\/2015","youtube":""},"game":{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
+        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}}},{"id":818,"title":"DreamHack
+        Winter 2015","start":"2015-11-26T00:00:00+0000","end":"2015-11-29T23:59:00+0000","city":"J\u00f6nk\u00f6ping","short_title":"DH
+        W","url":"https:\/\/abiosgaming.com\/tournaments\/Smash\/DreamHack-Winter-2015","description":"Following
+        up on the success of DreamHack London this year, Super Smash Bros. Melee is
+        coming back for round 2 at DreamHack Winter this November. Due to sub-optimal
+        planning during the London event, a large chunk of the top-tier players were
+        unable to attend. This time around, however, the all-star cast is attending
+        with the best players from all around the world looking to nab a piece of
+        the massive $ 30,000 prize pool. The prize money will be split up into two
+        separate tournaments, $ 20,000 for Singles, and $ 10,000 for Doubles.The event
+        will be held at the classic DreamHack site of Elmia in J\u00f6nk\u00f6ping,
+        Sweden, at the end of November this year.","short_description":"Following
+        up on the success of DreamHack London this year, Smash is coming back for
+        round 2 at DreamHack Winter this November.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/DH-Winter-Smash-Large.Jpeg","default":"https:\/\/img.abiosgaming.com\/events\/DH-Winter-Smash-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/DH-Winter-Smash-Small.png"},"prizepool":{"total":"$
+        30,000","first":"$ 10,000 Singles $ 5,000 Doubles","second":"$ 5,000 Singles
+        $ 2,500 Doubles","third":"$ 2,000 Singles $ 1,000 Doubles"},"links":{"website":"https:\/\/www.dreamhack.se\/dhw15\/esport\/","wiki":"http:\/\/wiki.teamliquid.net\/smash\/DreamHack_Winter_2015","youtube":"https:\/\/www.youtube.com\/user\/DreamhackMedia\/videos"},"game":{"id":10,"title":"Smash","long_title":"Super
+        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}}},{"id":894,"title":"DreamHack
+        Winter 2015","start":"2015-11-26T00:00:00+0000","end":"2015-11-28T00:00:00+0000","city":"Jonkoping","short_title":"DH
+        Winter 15","url":"https:\/\/abiosgaming.com\/tournaments\/Hearthstone\/DreamHack-Winter-2015","description":"DreamHack
+        Winter 2015 will feature an invitational including 32 of the World\u2019s
+        best Hearthstone players competing for $40,000 on November 26-28th. 24 of
+        these competitors will be directly invited to the tournament based on prior
+        results.&nbsp;The remaining 8 slots will be awarded to competitors earning
+        their slots through an online qualifier.","short_description":"DreamHack Winter
+        2015 will feature an invitational including 32 of the World\u2019s best Hearthstone
+        players competing for $40,000 in November!","images":{"large":"https:\/\/img.abiosgaming.com\/events\/DreamHack-DH-Logo-Large.jpg","default":"https:\/\/img.abiosgaming.com\/events\/DreamHack-DH-Logo-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/DreamHack-DH-Logo-Small.png"},"prizepool":{"total":"$
+        40,000","first":"$ 20,000","second":"$ 10,000","third":"$ 5,000"},"links":{"website":"http:\/\/www.dreamhack.se\/dhw15\/esport\/hearthstone\/","wiki":"http:\/\/wiki.teamliquid.net\/hearthstone\/DreamHack_2015\/Winter","youtube":"https:\/\/www.youtube.com\/user\/DreamhackMedia\/videos"},"game":{"id":6,"title":"Hearthstone","long_title":"Hearthstone","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Hearthstone-HS-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hearthstone-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hearthstone-logo.jpg"}}},{"id":870,"title":"IEM
+        San Jose","start":"2015-11-21T00:00:00+0000","end":"2015-11-23T00:00:00+0000","city":"San
+        Jose","short_title":"IEM","url":"https:\/\/abiosgaming.com\/tournaments\/CS%3AGO\/IEM-San-Jose","description":"Intel
+        Extreme Masters San Jose will take place on November 21st and 22nd at the
+        SAP Center, California. This tournament will be the first North American CSGO
+        Stadium event. Eight top teams will compete for the biggest share at the $100,000
+        prize-pool. Seven teams are invited to the tournament and the winner of the
+        IBP CSGO invitational will join them.&nbsp;","short_description":"Intel Extreme
+        Masters San Jose will take place on November 21st and 22nd at the SAP Center,
+        California. ","images":{"large":"https:\/\/img.abiosgaming.com\/events\/IEM-Intel-extreme-masters-ESL-large.jpg","default":"https:\/\/img.abiosgaming.com\/events\/IEM-Intel-extreme-masters-ESL-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/IEM-Intel-extreme-masters-ESL-small.png"},"prizepool":{"total":"$
+        100,000","first":"","second":"","third":""},"links":{"website":"http:\/\/en.intelextrememasters.com\/season10\/sanjose\/tournamentinfo\/","wiki":"","youtube":""},"game":{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
+        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}}},{"id":871,"title":"2015
+        IEM San Jose","start":"2015-11-21T00:00:00+0000","end":"2015-11-23T00:00:00+0000","city":"San
+        Jose","short_title":"IEM","url":"https:\/\/abiosgaming.com\/tournaments\/LoL\/2015-IEM-San-Jose","description":"Intel
+        Extreme Masters San Jose is the third event of IEM Season X, which will take
+        place at the SAP Center, California.&nbsp;IEM San Jose will feature 6 teams
+        of which five of the teams got voted through in their specific region, with
+        Fnatic and Origen coming from the EU Vote, Counter Logic Gaming and Team Solomid
+        coming from the NA vote, LGD Gaming coming from the CN Vote and the final
+        team to join the tournament is Jin Air Green Wings who got directly invited.","short_description":"Intel
+        Extreme Masters San Jose is the third event of IEM Season X, which will take
+        place at the SAP Center, California.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/IEM-Intel-extreme-masters-ESL-large.jpg","default":"https:\/\/img.abiosgaming.com\/events\/IEM-Intel-extreme-masters-ESL-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/IEM-Intel-extreme-masters-ESL-small.png"},"prizepool":{"total":"$
+        150,000 ","first":"TBA","second":"TBA","third":"TBA"},"links":{"website":"http:\/\/en.intelextrememasters.com\/season10\/sanjose\/tournamentinfo\/","wiki":"http:\/\/lol.gamepedia.com\/IEM_Season_X\/San_Jose","youtube":""},"game":{"id":2,"title":"LoL","long_title":"League
+        of Legends","images":{"square":"https:\/\/img.abiosgaming.com\/games\/LoL-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-lol-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-lol-logo.jpg"}}},{"id":885,"title":"Gold
+        Series 2015 Xian","start":"2015-11-21T00:00:00+0000","end":"2015-11-22T00:00:00+0000","city":"Xi''an","short_title":"Gold
+        S","url":"https:\/\/abiosgaming.com\/tournaments\/Hearthstone\/Gold-Series-2015-Xian","description":"Gold
+        Series 2015 Xi''an&nbsp;is the penultimate event of Gold Series 2015 Hearthstone
+        tournaments organized by NetEase.","short_description":"Gold Series 2015 Xi''an
+        is the penultimate event of Gold Series 2015 Hearthstone tournaments organized
+        by NetEase.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/gold-series-gs-big.jpg","default":"https:\/\/img.abiosgaming.com\/events\/gold-series-gs-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/gold-series-gs-small.png"},"prizepool":{"total":"$
+        16,890","first":"$ 7,860","second":"$ 1,570","third":"$ 1,260"},"links":{"website":"http:\/\/gold.163.com\/home\/","wiki":"http:\/\/wiki.teamliquid.net\/hearthstone\/Gold_Series_2015\/Xi%27an","youtube":""},"game":{"id":6,"title":"Hearthstone","long_title":"Hearthstone","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Hearthstone-HS-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hearthstone-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hearthstone-logo.jpg"}}},{"id":829,"title":"AlienTech
+        AllStars","start":"2015-11-20T00:00:00+0000","end":"2015-11-22T00:00:00+0000","city":"Porto","short_title":"ATAS","url":"https:\/\/abiosgaming.com\/tournaments\/CS%3AGO\/AlienTech-AllStars","description":"Alientech
+        is back with a new tournament called the AlienTech AllStars featuring a \u20ac6,000.
+        This tournament will be played offline at Shopping Cidade do Porto from November
+        20-22. The tournament will consist of ten Portuguese teams who will be joined
+        by six foreign sides.&nbsp;","short_description":"Alientech is back with a
+        new tournament called the AlienTech AllStars featuring a \u20ac6,000.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/alientech-allstars-AtAS-big.jpg","default":"https:\/\/img.abiosgaming.com\/events\/alientech-allstars-AtAS-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/alientech-allstars-AtAS-small.png"},"prizepool":{"total":"\u20ac6,000","first":"\u20ac
+        3,500","second":"\u20ac 1,500","third":"\u20ac 750"},"links":{"website":"http:\/\/www.teamalientech.com\/site\/index.php?site=news","wiki":"","youtube":""},"game":{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
+        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}}},{"id":904,"title":"2015
+        Gamegune","start":"2015-11-20T00:00:00+0000","end":"2015-11-22T00:00:00+0000","city":"Offline","short_title":"Gamegune","url":"https:\/\/abiosgaming.com\/tournaments\/Hearthstone\/2015-Gamegune","description":"Gamegune
+        2015 is an offline event and the venue this year will be the Guggenheim Museum
+        Bilbao and one of the most interesting competitions of 2015, HearthStone,
+        will be in centre stage.","short_description":"Gamegune 2015 is an offline
+        Hearthstone event with $ 26,834 prize purse. ","images":{"large":"https:\/\/img.abiosgaming.com\/events\/Gamegune-Event-Large.png","default":"https:\/\/img.abiosgaming.com\/events\/Gamegune-Event-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/Gamegune-Event-Small.png"},"prizepool":{"total":"$
+        26,834","first":"$ 12,890","second":"$ 6,445","third":"$ 3,222"},"links":{"website":"http:\/\/gamegune.org\/hearthstone","wiki":"http:\/\/wiki.teamliquid.net\/hearthstone\/Gamegune","youtube":""},"game":{"id":6,"title":"Hearthstone","long_title":"Hearthstone","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Hearthstone-HS-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hearthstone-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hearthstone-logo.jpg"}}},{"id":886,"title":"Nation
+        Wars III","start":"2015-11-19T00:00:00+0000","end":"2015-12-03T00:00:00+0000","city":"Online","short_title":"Nation","url":"https:\/\/abiosgaming.com\/tournaments\/SCII\/Nation-Wars-III","description":"The
+        third edition of Nation Wars is here.&nbsp;Nation Wars is a tournament where
+        pro players each participating country form teams and battle to find out who
+        is the worldwide best nation on Legacy of the Void?Nation Wars III will feature
+        a&nbsp;starting Prize Pool of $ 15 000 and will be increased by 50% of each
+        net donations throughout the tournament on the French and English streams.O\u2019Gaming
+        TV is a famous French Web TV made up of the most active casters in France.","short_description":"Nation
+        wars is a tournament where pro players from each participating country form
+        teams and battle for a minimum Prize Pool of $ 15,000!","images":{"large":"https:\/\/img.abiosgaming.com\/events\/nation-wars-iii-3-nw3-big.jpg","default":"https:\/\/img.abiosgaming.com\/events\/nation-wars-iii-3-nw3-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/nation-wars-iii-3-nw3-small.png"},"prizepool":{"total":"$
+        15,000+","first":"50%","second":"25%","third":"15%"},"links":{"website":"http:\/\/nationwars.ogaming.tv\/0ms\/#!\/en\/sc2","wiki":"http:\/\/wiki.teamliquid.net\/starcraft2\/NationWars_III","youtube":"https:\/\/www.youtube.com\/user\/SC2OGTV"},"game":{"id":3,"title":"SCII","long_title":"StarCraft
+        II","images":{"square":"https:\/\/img.abiosgaming.com\/games\/SCII-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-sc2-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-SCII-logo.jpg"}}}]'}
+    headers:
+      accept-ranges: [bytes]
+      access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
+      access-control-allow-origin: ['*']
+      access-control-expose-headers: [Link]
+      age: ['0']
+      cache-control: ['max-age=300, public']
+      connection: [keep-alive]
+      content-length: ['24169']
+      content-type: [application/json]
+      date: ['Mon, 16 Nov 2015 02:41:29 GMT']
+      link: ['<http://api.abiosgaming.com/v1/tournaments/?access_token=O1ER2s887M0sYa5zOf8f5TuLd4s60OYQThi5rFmh&order=start&sort=DESC&page=1>;
+          rel="first", <>; rel="prev", <http://api.abiosgaming.com/v1/tournaments/?access_token=O1ER2s887M0sYa5zOf8f5TuLd4s60OYQThi5rFmh&order=start&sort=DESC&page=2>;
+          rel="next", <http://api.abiosgaming.com/v1/tournaments/?access_token=O1ER2s887M0sYa5zOf8f5TuLd4s60OYQThi5rFmh&order=start&sort=DESC&page=56>;
+          rel="last"']
+      server: [nginx/1.4.6 (Ubuntu)]
+      via: [1.1 varnish]
+      x-powered-by: [PHP/5.5.9-1ubuntu4.11]
+      x-varnish: ['1467459734']
+    status: {code: 200, message: OK}
+version: 1

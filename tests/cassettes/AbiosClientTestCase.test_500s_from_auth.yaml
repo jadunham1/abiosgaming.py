@@ -1,0 +1,31 @@
+interactions:
+- request:
+    body: grant_type=client_credentials&client_id=vhVlOflCSOLjMyzAd5eGM7PScyfvIM6TptTCC7Y0&client_secret=IROG0RVhB2mkIwdvoCjHJ8IOks9lDKbFXB6IeDe0
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['135']
+      Content-Type: [application/x-www-form-urlencoded]
+      User-Agent: [python-requests/2.8.1]
+    method: POST
+    uri: https://api.abiosgaming.com/v1/oauth/access_token
+  response:
+    body: {string: !!python/unicode '{"access_token":"ACLlQBQPnB9J5M7rkJpCzNxkRKVBsp2kakCDumd4","token_type":"Bearer","expires_in":31556952}'}
+    headers:
+      accept-ranges: [bytes]
+      access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
+      access-control-allow-origin: ['*']
+      access-control-expose-headers: [Link]
+      age: ['0']
+      cache-control: [no-cache]
+      connection: [keep-alive]
+      content-length: ['103']
+      content-type: [application/json]
+      date: ['Mon, 16 Nov 2015 05:11:10 GMT']
+      server: [nginx/1.4.6 (Ubuntu)]
+      via: [1.1 varnish]
+      x-powered-by: [PHP/5.5.9-1ubuntu4.11]
+      x-varnish: ['1467480380']
+    status: {code: 200, message: OK}
+version: 1

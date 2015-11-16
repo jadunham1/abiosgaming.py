@@ -1,0 +1,75 @@
+interactions:
+- request:
+    body: client_secret=IROG0RVhB2mkIwdvoCjHJ8IOks9lDKbFXB6IeDe0&client_id=vhVlOflCSOLjMyzAd5eGM7PScyfvIM6TptTCC7Y0&grant_type=client_credentials
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['135']
+      Content-Type: [application/x-www-form-urlencoded]
+      User-Agent: [python-requests/2.8.1]
+    method: POST
+    uri: https://api.abiosgaming.com/v1/oauth/access_token
+  response:
+    body: {string: !!python/unicode '{"access_token":"kIEZb1IQx5Krb7vM3qgGEF8DKtTUf3p9NAXLohhk","token_type":"Bearer","expires_in":31556952}'}
+    headers:
+      accept-ranges: [bytes]
+      access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
+      access-control-allow-origin: ['*']
+      access-control-expose-headers: [Link]
+      age: ['0']
+      cache-control: [no-cache]
+      connection: [keep-alive]
+      content-length: ['103']
+      content-type: [application/json]
+      date: ['Mon, 16 Nov 2015 02:39:37 GMT']
+      server: [nginx/1.4.6 (Ubuntu)]
+      via: [1.1 varnish]
+      x-powered-by: [PHP/5.5.9-1ubuntu4.11]
+      x-varnish: ['1467459454']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.8.1]
+    method: GET
+    uri: https://api.abiosgaming.com/v1/matches?access_token=kIEZb1IQx5Krb7vM3qgGEF8DKtTUf3p9NAXLohhk&starts_after=now&sort=ASC
+  response:
+    body: {string: !!python/unicode '[{"id":43530,"title":"UB Semifinals","start":"2015-11-16T03:00:00+0000","end":"2015-11-16T04:00:00+0000","bestOf":3},{"id":43008,"title":"CN
+        Qualifier - Group C","start":"2015-11-16T05:00:00+0000","end":"2015-11-16T08:00:00+0000","bestOf":2},{"id":43321,"title":"UB
+        Quarterfinal","start":"2015-11-16T06:00:00+0000","end":"2015-11-16T08:00:00+0000","bestOf":3},{"id":43014,"title":"CN
+        Qualifier - Group D","start":"2015-11-16T07:00:00+0000","end":"2015-11-16T09:00:00+0000","bestOf":2},{"id":43497,"title":"Group
+        A","start":"2015-11-16T07:00:00+0000","end":"2015-11-16T10:00:00+0000","bestOf":3},{"id":43322,"title":"UB
+        Quarterfinal","start":"2015-11-16T07:30:00+0000","end":"2015-11-16T08:30:00+0000","bestOf":3},{"id":43004,"title":"CN
+        Qualifier - Group A","start":"2015-11-16T09:00:00+0000","end":"2015-11-16T11:00:00+0000","bestOf":2},{"id":42134,"title":"UB
+        Quarterfinals","start":"2015-11-16T09:30:00+0000","end":"2015-11-16T12:30:00+0000","bestOf":3},{"id":39552,"title":"Round
+        1 Group A","start":"2015-11-16T10:00:00+0000","end":"2015-11-16T12:00:00+0000","bestOf":3},{"id":43498,"title":"Group
+        A","start":"2015-11-16T10:00:00+0000","end":"2015-11-16T13:00:00+0000","bestOf":3},{"id":42556,"title":"Round
+        2","start":"2015-11-16T11:00:00+0000","end":"2015-11-16T17:00:00+0000","bestOf":15},{"id":39553,"title":"Round
+        1 Group A","start":"2015-11-16T12:00:00+0000","end":"2015-11-16T14:00:00+0000","bestOf":3},{"id":41091,"title":"Semifinals","start":"2015-11-16T12:00:00+0000","end":"2015-11-14T15:00:00+0000","bestOf":3},{"id":42135,"title":"UB
+        Quarterfinals","start":"2015-11-16T13:30:00+0000","end":"2015-11-16T16:30:00+0000","bestOf":3},{"id":39554,"title":"Round
+        1 Group A","start":"2015-11-16T14:00:00+0000","end":"2015-11-16T16:00:00+0000","bestOf":3}]'}
+    headers:
+      accept-ranges: [bytes]
+      access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
+      access-control-allow-origin: ['*']
+      access-control-expose-headers: [Link]
+      age: ['0']
+      cache-control: ['max-age=300, public']
+      connection: [keep-alive]
+      content-length: ['1764']
+      content-type: [application/json]
+      date: ['Mon, 16 Nov 2015 02:37:23 GMT']
+      link: ['<http://api.abiosgaming.com/v1/matches/?access_token=kIEZb1IQx5Krb7vM3qgGEF8DKtTUf3p9NAXLohhk&order=start&sort=ASC&starts_after=now&page=1>;
+          rel="first", <>; rel="prev", <http://api.abiosgaming.com/v1/matches/?access_token=kIEZb1IQx5Krb7vM3qgGEF8DKtTUf3p9NAXLohhk&order=start&sort=ASC&starts_after=now&page=2>;
+          rel="next", <http://api.abiosgaming.com/v1/matches/?access_token=kIEZb1IQx5Krb7vM3qgGEF8DKtTUf3p9NAXLohhk&order=start&sort=ASC&starts_after=now&page=23>;
+          rel="last"']
+      server: [nginx/1.4.6 (Ubuntu)]
+      via: [1.1 varnish]
+      x-powered-by: [PHP/5.5.9-1ubuntu4.11]
+      x-varnish: ['1830153483']
+    status: {code: 200, message: OK}
+version: 1

@@ -1,0 +1,55 @@
+interactions:
+- request:
+    body: client_id=vhVlOflCSOLjMyzAd5eGM7PScyfvIM6TptTCC7Y0&grant_type=client_credentials&client_secret=IROG0RVhB2mkIwdvoCjHJ8IOks9lDKbFXB6IeDe0
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['135']
+      Content-Type: [application/x-www-form-urlencoded]
+      User-Agent: [python-requests/2.8.1]
+    method: POST
+    uri: https://api.abiosgaming.com/v1/oauth/access_token
+  response:
+    body: {string: !!python/unicode '{"access_token":"3cU6grj9LKFw5gnKHGHG1YedPRC6Pvjh331uWEpv","token_type":"Bearer","expires_in":31556952}'}
+    headers:
+      accept-ranges: [bytes]
+      access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
+      access-control-allow-origin: ['*']
+      access-control-expose-headers: [Link]
+      age: ['0']
+      cache-control: [no-cache]
+      connection: [keep-alive]
+      content-length: ['103']
+      content-type: [application/json]
+      date: ['Mon, 16 Nov 2015 04:35:58 GMT']
+      server: [nginx/1.4.6 (Ubuntu)]
+      via: [1.1 varnish]
+      x-powered-by: [PHP/5.5.9-1ubuntu4.11]
+      x-varnish: ['1830170407']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.8.1]
+    method: GET
+    uri: https://uac.10010.com/portal/Service/MallLogin?access_token=3cU6grj9LKFw5gnKHGHG1YedPRC6Pvjh331uWEpv
+  response:
+    body: {string: !!python/unicode "<!DOCTYPE html>\n<html>\n<head>\n<title>Error</title>\n\
+        <style>\n    body {\n        width: 35em;\n        margin: 0 auto;\n     \
+        \   font-family: Tahoma, Verdana, Arial, sans-serif;\n    }\n</style>\n</head>\n\
+        <body>\n<h1>An error occurred.</h1>\n<p>Sorry, the page you are looking for\
+        \ is currently unavailable.<br/>\nPlease try again later.</p>\n<p>If you are\
+        \ the system administrator of this resource then you should check\nthe <a\
+        \ href=\"http://nginx.org/r/error_log\">error log</a> for details.</p>\n<p><em>Faithfully\
+        \ yours, nginx.</em></p>\n</body>\n</html>\n"}
+    headers:
+      connection: [keep-alive]
+      content-type: [text/html]
+      date: ['Mon, 16 Nov 2015 04:36:25 GMT']
+      server: [openresty]
+    status: {code: 500, message: Internal Server Error}
+version: 1

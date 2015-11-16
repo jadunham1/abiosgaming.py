@@ -16,3 +16,9 @@ class AbiosClient(BaseAbiosClient):
 
     def get_games(self, order="id", sort="ASC"):
         return self._get_games({"order": order, "sort": sort})
+
+    def get_tournaments(self):
+        return self._get_tournaments({})
+
+    def get_competitors(self):
+        return self._get_competitors({})
