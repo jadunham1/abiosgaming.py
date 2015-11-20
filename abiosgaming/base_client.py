@@ -1,9 +1,8 @@
 import logging
 import requests
-from requests.exceptions import HTTPError
-from urllib3.util import Retry
+from requests.exceptions import HTTPError, RetryError
+from requests.packages.urllib3.util.retry import Retry
 from requests.adapters import HTTPAdapter
-from urllib3.exceptions import MaxRetryError
 from .exceptions import PaginationNotFound
 from .utils import named_tuple
 
@@ -18,8 +17,10 @@ class BaseAbiosClient(object):
         retry = Retry(
             total=retries,
             status_forcelist=[500],
+            method_whitelist= frozenset(['POST', 'GET', 'PUT']),
             backoff_factor=1
         )
+        logging.debug("retryable {}".format(retry.is_forced_retry('post', 500)))
         adapter = HTTPAdapter(max_retries=retry)
         self.session.mount(self._endpoint, adapter)
         self._access_token = None
@@ -81,7 +82,7 @@ class BaseAbiosClient(object):
             response = self.session.post(url,
                                          data=data,
                                          verify=True)
-        except MaxRetryError as e:
+        except RetryError as e:
             logging.exception(e)
             raise e
 
@@ -102,7 +103,7 @@ class BaseAbiosClient(object):
             response = self.session.get(url,
                                         params=parameters,
                                         verify=True)
-        except MaxRetryError as e:
+        except RetryError as e:
             logging.exception(e)
             raise e
 

@@ -1,13 +1,15 @@
 from vcr_unittest import VCRTestCase
 from abiosgaming.client import AbiosClient
 from urllib3.exceptions import MaxRetryError
-from requests.exceptions import HTTPError
+from requests.exceptions import HTTPError, RetryError
+import logging
 
 try:
     from unittest import mock
 except ImportError:
     import mock
 
+logging.basicConfig(level=logging.DEBUG)
 
 class AbiosClientTestCase(VCRTestCase):
     def setUp(self):
@@ -50,14 +52,8 @@ class AbiosClientTestCase(VCRTestCase):
     def test_400s_from_games(self):
         self.assertRaises(HTTPError, self.client.get_games)
 
-    @mock.patch('abiosgaming.base_client.requests.Session')
-    def test_max_retries_from_post_request(self, session):
-        client = AbiosClient()
-        session.return_value.post.side_effect = MaxRetryError(mock.MagicMock(), 'test.com')
-        self.assertRaises(MaxRetryError, client.refresh_access_token)
+    def test_500s_from_auth(self):
+        self.assertRaises(RetryError, self.client.refresh_access_token)
 
-    @mock.patch('abiosgaming.base_client.requests.Session')
-    def test_max_reties_from_get_request(self, session):
-        client = AbiosClient()
-        session.return_value.get.side_effect = MaxRetryError(mock.MagicMock(), 'test.com')
-        self.assertRaises(MaxRetryError, client.get_games)
+    def test_500s_from_games(self):
+        self.assertRaises(RetryError, self.client.get_games)
