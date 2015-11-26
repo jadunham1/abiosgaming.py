@@ -30,11 +30,22 @@ class PyTest(TestCommand):
         sys.exit(errno)
 
 setup(
-    name = "Abiosgaming Python Library",
-    version = "0.1",
+    name = "abiosgaming.py",
+    description = 'Client for interacting with the AbiosGaming API',
+    author = 'Jeff Dunham',
+    author_email = 'jeffrey.a.dunham@gmail.com',
+    version = "0.2",
     packages = packages,
     setup_requires=[
         'pytest-runner',
+    ],
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'License :: OSI Approved',
+        'Intended Audience :: Developers',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.4',
     ],
     tests_require=[
         'pytest',
