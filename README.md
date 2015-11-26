@@ -7,6 +7,7 @@ from abiosgaming.client import AbiosClient
 client = AbiosClient(username='user', password='pass')
 
 -- or if you have an access token already you can instantiate a client with it
+
 client = AbiosClient(access_token='access_token')
 
 The client handles AbiosGaming APIs paginated calls you just have to specify how many items you want.
