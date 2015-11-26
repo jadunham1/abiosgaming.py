@@ -1,34 +1,5 @@
 interactions:
 - request:
-    body: client_id=vhVlOflCSOLjMyzAd5eGM7PScyfvIM6TptTCC7Y0&client_secret=IROG0RVhB2mkIwdvoCjHJ8IOks9lDKbFXB6IeDe0&grant_type=client_credentials
-    headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      Content-Length: ['135']
-      Content-Type: [application/x-www-form-urlencoded]
-      User-Agent: [python-requests/2.8.1]
-    method: POST
-    uri: https://api.abiosgaming.com/v1/oauth/access_token
-  response:
-    body: {string: !!python/unicode '{"access_token":"CLpbWlaDRBMTBFDVv4CJ0S1cVJLGDHHNejBf9hku","token_type":"Bearer","expires_in":31556952}'}
-    headers:
-      accept-ranges: [bytes]
-      access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
-      access-control-allow-origin: ['*']
-      access-control-expose-headers: [Link]
-      age: ['0']
-      cache-control: [no-cache]
-      connection: [keep-alive]
-      content-length: ['103']
-      content-type: [application/json]
-      date: ['Mon, 16 Nov 2015 04:45:36 GMT']
-      server: [nginx/1.4.6 (Ubuntu)]
-      via: [1.1 varnish]
-      x-powered-by: [PHP/5.5.9-1ubuntu4.11]
-      x-varnish: ['1467477049']
-    status: {code: 200, message: OK}
-- request:
     body: null
     headers:
       Accept: ['*/*']
@@ -36,36 +7,28 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.8.1]
     method: GET
-    uri: https://api.abiosgaming.com/v1/games?order=id&sort=ASC&access_token=CLpbWlaDRBMTBFDVv4CJ0S1cVJLGDHHNejBf9hku
+    uri: https://api.abiosgaming.com/v1/games?order=id&access_token=FAKE_ACCESS_TOKEN&sort=ASC
   response:
     body: {string: !!python/unicode '[{"id":1,"title":"Dota 2","long_title":"Defense
-        of the Ancients 2","images":{"square":"https:\/\/img.abiosgaming.com\/games\/dota-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-dota-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-Dota-logo.jpg"}},{"id":2,"title":"LoL","long_title":"League
-        of Legends","images":{"square":"https:\/\/img.abiosgaming.com\/games\/LoL-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-lol-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-lol-logo.jpg"}},{"id":3,"title":"SCII","long_title":"StarCraft
-        II","images":{"square":"https:\/\/img.abiosgaming.com\/games\/SCII-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-sc2-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-SCII-logo.jpg"}},{"id":4,"title":"HoN","long_title":"Heroes
-        of Newerth","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Heroes-of-Newerth-HoN-Logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hon-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hon-logo.jpg"}},{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
-        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}},{"id":6,"title":"Hearthstone","long_title":"Hearthstone","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Hearthstone-HS-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hearthstone-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hearthstone-logo.jpg"}},{"id":7,"title":"WoW","long_title":"World
-        of Warcraft","images":{"square":"https:\/\/img.abiosgaming.com\/games\/World-of-Warcraft-WoW-Flat-Game-Icon-2.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-wow-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-wow-logo.jpg"}},{"id":8,"title":"SMITE","long_title":"SMITE","images":{"square":"https:\/\/img.abiosgaming.com\/games\/SMITE-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-smite-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-smite-logo.jpg"}},{"id":9,"title":"HotS","long_title":"Heroes
-        of the Storm","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Heroes-of-the-Storm-Logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hots-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hots-logo.jpg"}},{"id":10,"title":"Smash","long_title":"Super
-        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}},{"id":11,"title":"CoD","long_title":"Call
         of Duty","images":{"square":"https:\/\/img.abiosgaming.com\/games\/square-flat-call-of-duty-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/flat-round-call-of-duty-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-cod-logo-v2.png"}}]'}
     headers:
       accept-ranges: [bytes]
       access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
       access-control-allow-origin: ['*']
       access-control-expose-headers: [Link]
-      age: ['0']
+      age: ['3']
       cache-control: ['max-age=86400, public']
       connection: [keep-alive]
       content-length: ['3297']
       content-type: [application/json]
-      date: ['Mon, 16 Nov 2015 04:43:23 GMT']
-      link: ['<http://api.abiosgaming.com/v1/games/?access_token=CLpbWlaDRBMTBFDVv4CJ0S1cVJLGDHHNejBf9hku&order=id&sort=ASC&page=1>;
-          rel="first", <>; rel="prev", <>; rel="next", <http://api.abiosgaming.com/v1/games/?access_token=CLpbWlaDRBMTBFDVv4CJ0S1cVJLGDHHNejBf9hku&order=id&sort=ASC&page=1>;
+      date: ['Thu, 26 Nov 2015 04:03:13 GMT']
+      link: ['<http://api.abiosgaming.com/v1/games/?access_token=FAKE_ACCESS_TOKEN&order=id&sort=ASC&page=1>;
+          rel="first", <>; rel="prev", <>; rel="next", <http://api.abiosgaming.com/v1/games/?access_token=FAKE_ACCESS_TOKEN&order=id&sort=ASC&page=1>;
           rel="last"']
       server: [nginx/1.4.6 (Ubuntu)]
       via: [1.1 varnish]
       x-powered-by: [PHP/5.5.9-1ubuntu4.11]
-      x-varnish: ['1830171346']
+      x-varnish: [1908500729 1908500718]
     status: {code: 500, message: OK}
 - request:
     body: null
@@ -75,36 +38,28 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.8.1]
     method: GET
-    uri: https://api.abiosgaming.com/v1/games?order=id&sort=ASC&access_token=CLpbWlaDRBMTBFDVv4CJ0S1cVJLGDHHNejBf9hku
+    uri: https://api.abiosgaming.com/v1/games?order=id&access_token=FAKE_ACCESS_TOKEN&sort=ASC
   response:
     body: {string: !!python/unicode '[{"id":1,"title":"Dota 2","long_title":"Defense
-        of the Ancients 2","images":{"square":"https:\/\/img.abiosgaming.com\/games\/dota-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-dota-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-Dota-logo.jpg"}},{"id":2,"title":"LoL","long_title":"League
-        of Legends","images":{"square":"https:\/\/img.abiosgaming.com\/games\/LoL-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-lol-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-lol-logo.jpg"}},{"id":3,"title":"SCII","long_title":"StarCraft
-        II","images":{"square":"https:\/\/img.abiosgaming.com\/games\/SCII-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-sc2-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-SCII-logo.jpg"}},{"id":4,"title":"HoN","long_title":"Heroes
-        of Newerth","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Heroes-of-Newerth-HoN-Logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hon-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hon-logo.jpg"}},{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
-        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}},{"id":6,"title":"Hearthstone","long_title":"Hearthstone","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Hearthstone-HS-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hearthstone-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hearthstone-logo.jpg"}},{"id":7,"title":"WoW","long_title":"World
-        of Warcraft","images":{"square":"https:\/\/img.abiosgaming.com\/games\/World-of-Warcraft-WoW-Flat-Game-Icon-2.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-wow-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-wow-logo.jpg"}},{"id":8,"title":"SMITE","long_title":"SMITE","images":{"square":"https:\/\/img.abiosgaming.com\/games\/SMITE-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-smite-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-smite-logo.jpg"}},{"id":9,"title":"HotS","long_title":"Heroes
-        of the Storm","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Heroes-of-the-Storm-Logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hots-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hots-logo.jpg"}},{"id":10,"title":"Smash","long_title":"Super
-        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}},{"id":11,"title":"CoD","long_title":"Call
         of Duty","images":{"square":"https:\/\/img.abiosgaming.com\/games\/square-flat-call-of-duty-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/flat-round-call-of-duty-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-cod-logo-v2.png"}}]'}
     headers:
       accept-ranges: [bytes]
       access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
       access-control-allow-origin: ['*']
       access-control-expose-headers: [Link]
-      age: ['0']
+      age: ['3']
       cache-control: ['max-age=86400, public']
       connection: [keep-alive]
       content-length: ['3297']
       content-type: [application/json]
-      date: ['Mon, 16 Nov 2015 04:43:23 GMT']
-      link: ['<http://api.abiosgaming.com/v1/games/?access_token=CLpbWlaDRBMTBFDVv4CJ0S1cVJLGDHHNejBf9hku&order=id&sort=ASC&page=1>;
-          rel="first", <>; rel="prev", <>; rel="next", <http://api.abiosgaming.com/v1/games/?access_token=CLpbWlaDRBMTBFDVv4CJ0S1cVJLGDHHNejBf9hku&order=id&sort=ASC&page=1>;
+      date: ['Thu, 26 Nov 2015 04:03:13 GMT']
+      link: ['<http://api.abiosgaming.com/v1/games/?access_token=FAKE_ACCESS_TOKEN&order=id&sort=ASC&page=1>;
+          rel="first", <>; rel="prev", <>; rel="next", <http://api.abiosgaming.com/v1/games/?access_token=FAKE_ACCESS_TOKEN&order=id&sort=ASC&page=1>;
           rel="last"']
       server: [nginx/1.4.6 (Ubuntu)]
       via: [1.1 varnish]
       x-powered-by: [PHP/5.5.9-1ubuntu4.11]
-      x-varnish: ['1830171346']
+      x-varnish: [1908500729 1908500718]
     status: {code: 500, message: OK}
 - request:
     body: null
@@ -114,36 +69,28 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.8.1]
     method: GET
-    uri: https://api.abiosgaming.com/v1/games?order=id&sort=ASC&access_token=CLpbWlaDRBMTBFDVv4CJ0S1cVJLGDHHNejBf9hku
+    uri: https://api.abiosgaming.com/v1/games?order=id&access_token=FAKE_ACCESS_TOKEN&sort=ASC
   response:
     body: {string: !!python/unicode '[{"id":1,"title":"Dota 2","long_title":"Defense
-        of the Ancients 2","images":{"square":"https:\/\/img.abiosgaming.com\/games\/dota-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-dota-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-Dota-logo.jpg"}},{"id":2,"title":"LoL","long_title":"League
-        of Legends","images":{"square":"https:\/\/img.abiosgaming.com\/games\/LoL-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-lol-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-lol-logo.jpg"}},{"id":3,"title":"SCII","long_title":"StarCraft
-        II","images":{"square":"https:\/\/img.abiosgaming.com\/games\/SCII-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-sc2-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-SCII-logo.jpg"}},{"id":4,"title":"HoN","long_title":"Heroes
-        of Newerth","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Heroes-of-Newerth-HoN-Logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hon-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hon-logo.jpg"}},{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
-        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}},{"id":6,"title":"Hearthstone","long_title":"Hearthstone","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Hearthstone-HS-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hearthstone-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hearthstone-logo.jpg"}},{"id":7,"title":"WoW","long_title":"World
-        of Warcraft","images":{"square":"https:\/\/img.abiosgaming.com\/games\/World-of-Warcraft-WoW-Flat-Game-Icon-2.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-wow-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-wow-logo.jpg"}},{"id":8,"title":"SMITE","long_title":"SMITE","images":{"square":"https:\/\/img.abiosgaming.com\/games\/SMITE-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-smite-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-smite-logo.jpg"}},{"id":9,"title":"HotS","long_title":"Heroes
-        of the Storm","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Heroes-of-the-Storm-Logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hots-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hots-logo.jpg"}},{"id":10,"title":"Smash","long_title":"Super
-        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}},{"id":11,"title":"CoD","long_title":"Call
         of Duty","images":{"square":"https:\/\/img.abiosgaming.com\/games\/square-flat-call-of-duty-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/flat-round-call-of-duty-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-cod-logo-v2.png"}}]'}
     headers:
       accept-ranges: [bytes]
       access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
       access-control-allow-origin: ['*']
       access-control-expose-headers: [Link]
-      age: ['0']
+      age: ['3']
       cache-control: ['max-age=86400, public']
       connection: [keep-alive]
       content-length: ['3297']
       content-type: [application/json]
-      date: ['Mon, 16 Nov 2015 04:43:23 GMT']
-      link: ['<http://api.abiosgaming.com/v1/games/?access_token=CLpbWlaDRBMTBFDVv4CJ0S1cVJLGDHHNejBf9hku&order=id&sort=ASC&page=1>;
-          rel="first", <>; rel="prev", <>; rel="next", <http://api.abiosgaming.com/v1/games/?access_token=CLpbWlaDRBMTBFDVv4CJ0S1cVJLGDHHNejBf9hku&order=id&sort=ASC&page=1>;
+      date: ['Thu, 26 Nov 2015 04:03:13 GMT']
+      link: ['<http://api.abiosgaming.com/v1/games/?access_token=FAKE_ACCESS_TOKEN&order=id&sort=ASC&page=1>;
+          rel="first", <>; rel="prev", <>; rel="next", <http://api.abiosgaming.com/v1/games/?access_token=FAKE_ACCESS_TOKEN&order=id&sort=ASC&page=1>;
           rel="last"']
       server: [nginx/1.4.6 (Ubuntu)]
       via: [1.1 varnish]
       x-powered-by: [PHP/5.5.9-1ubuntu4.11]
-      x-varnish: ['1830171346']
+      x-varnish: [1908500729 1908500718]
     status: {code: 500, message: OK}
 - request:
     body: null
@@ -153,35 +100,58 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.8.1]
     method: GET
-    uri: https://api.abiosgaming.com/v1/games?order=id&sort=ASC&access_token=CLpbWlaDRBMTBFDVv4CJ0S1cVJLGDHHNejBf9hku
+    uri: https://api.abiosgaming.com/v1/games?order=id&access_token=FAKE_ACCESS_TOKEN&sort=ASC
   response:
     body: {string: !!python/unicode '[{"id":1,"title":"Dota 2","long_title":"Defense
-        of the Ancients 2","images":{"square":"https:\/\/img.abiosgaming.com\/games\/dota-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-dota-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-Dota-logo.jpg"}},{"id":2,"title":"LoL","long_title":"League
-        of Legends","images":{"square":"https:\/\/img.abiosgaming.com\/games\/LoL-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-lol-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-lol-logo.jpg"}},{"id":3,"title":"SCII","long_title":"StarCraft
-        II","images":{"square":"https:\/\/img.abiosgaming.com\/games\/SCII-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-sc2-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-SCII-logo.jpg"}},{"id":4,"title":"HoN","long_title":"Heroes
-        of Newerth","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Heroes-of-Newerth-HoN-Logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hon-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hon-logo.jpg"}},{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
-        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}},{"id":6,"title":"Hearthstone","long_title":"Hearthstone","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Hearthstone-HS-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hearthstone-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hearthstone-logo.jpg"}},{"id":7,"title":"WoW","long_title":"World
-        of Warcraft","images":{"square":"https:\/\/img.abiosgaming.com\/games\/World-of-Warcraft-WoW-Flat-Game-Icon-2.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-wow-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-wow-logo.jpg"}},{"id":8,"title":"SMITE","long_title":"SMITE","images":{"square":"https:\/\/img.abiosgaming.com\/games\/SMITE-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-smite-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-smite-logo.jpg"}},{"id":9,"title":"HotS","long_title":"Heroes
-        of the Storm","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Heroes-of-the-Storm-Logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hots-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hots-logo.jpg"}},{"id":10,"title":"Smash","long_title":"Super
-        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}},{"id":11,"title":"CoD","long_title":"Call
         of Duty","images":{"square":"https:\/\/img.abiosgaming.com\/games\/square-flat-call-of-duty-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/flat-round-call-of-duty-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-cod-logo-v2.png"}}]'}
     headers:
       accept-ranges: [bytes]
       access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
       access-control-allow-origin: ['*']
       access-control-expose-headers: [Link]
-      age: ['0']
+      age: ['3']
       cache-control: ['max-age=86400, public']
       connection: [keep-alive]
       content-length: ['3297']
       content-type: [application/json]
-      date: ['Mon, 16 Nov 2015 04:43:23 GMT']
-      link: ['<http://api.abiosgaming.com/v1/games/?access_token=CLpbWlaDRBMTBFDVv4CJ0S1cVJLGDHHNejBf9hku&order=id&sort=ASC&page=1>;
-          rel="first", <>; rel="prev", <>; rel="next", <http://api.abiosgaming.com/v1/games/?access_token=CLpbWlaDRBMTBFDVv4CJ0S1cVJLGDHHNejBf9hku&order=id&sort=ASC&page=1>;
+      date: ['Thu, 26 Nov 2015 04:03:13 GMT']
+      link: ['<http://api.abiosgaming.com/v1/games/?access_token=FAKE_ACCESS_TOKEN&order=id&sort=ASC&page=1>;
+          rel="first", <>; rel="prev", <>; rel="next", <http://api.abiosgaming.com/v1/games/?access_token=FAKE_ACCESS_TOKEN&order=id&sort=ASC&page=1>;
           rel="last"']
       server: [nginx/1.4.6 (Ubuntu)]
       via: [1.1 varnish]
       x-powered-by: [PHP/5.5.9-1ubuntu4.11]
-      x-varnish: ['1830171346']
+      x-varnish: [1908500729 1908500718]
+    status: {code: 500, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.8.1]
+    method: GET
+    uri: https://api.abiosgaming.com/v1/games?order=id&access_token=FAKE_ACCESS_TOKEN&sort=ASC
+  response:
+    body: {string: !!python/unicode '[{"id":1,"title":"Dota 2","long_title":"Defense
+        of Duty","images":{"square":"https:\/\/img.abiosgaming.com\/games\/square-flat-call-of-duty-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/flat-round-call-of-duty-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-cod-logo-v2.png"}}]'}
+    headers:
+      accept-ranges: [bytes]
+      access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
+      access-control-allow-origin: ['*']
+      access-control-expose-headers: [Link]
+      age: ['3']
+      cache-control: ['max-age=86400, public']
+      connection: [keep-alive]
+      content-length: ['3297']
+      content-type: [application/json]
+      date: ['Thu, 26 Nov 2015 04:03:13 GMT']
+      link: ['<http://api.abiosgaming.com/v1/games/?access_token=FAKE_ACCESS_TOKEN&order=id&sort=ASC&page=1>;
+          rel="first", <>; rel="prev", <>; rel="next", <http://api.abiosgaming.com/v1/games/?access_token=FAKE_ACCESS_TOKEN&order=id&sort=ASC&page=1>;
+          rel="last"']
+      server: [nginx/1.4.6 (Ubuntu)]
+      via: [1.1 varnish]
+      x-powered-by: [PHP/5.5.9-1ubuntu4.11]
+      x-varnish: [1908500729 1908500718]
     status: {code: 500, message: OK}
 version: 1

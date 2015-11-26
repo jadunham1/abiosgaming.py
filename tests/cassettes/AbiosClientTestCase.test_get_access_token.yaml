@@ -1,22 +1,18 @@
 interactions:
 - request:
-    body: grant_type=client_credentials
+    body: client_secret=TCfZ6VFaTbOOedHdsytjbMRanEcCUpG9ZXQsCB0m&grant_type=client_credentials&client_id=iJvR6ygRiaWz3klmvqvOg66WvuYC6hnSFfKIqs1I
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Content-Length: ['29']
+      Content-Length: ['135']
       Content-Type: [application/x-www-form-urlencoded]
       User-Agent: [python-requests/2.8.1]
     method: POST
     uri: https://api.abiosgaming.com/v1/oauth/access_token
   response:
-    body: {string: !!python/unicode '{"error":"invalid_request","error_description":"The
-        request is missing a required parameter, includes an invalid parameter value,
-        includes a parameter more than once, or is otherwise malformed. Check the
-        \"client_id\" parameter."}'}
+    body: {string: !!python/unicode '{"access_token":"D6Lh5B29Tdqr53j7iHnwNUUqBq9edzmlq03tDx7X","token_type":"Bearer","expires_in":31556952}'}
     headers:
-      '0': [HTTP/1.1 400 Bad Request]
       accept-ranges: [bytes]
       access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
       access-control-allow-origin: ['*']
@@ -24,12 +20,12 @@ interactions:
       age: ['0']
       cache-control: [no-cache]
       connection: [keep-alive]
-      content-length: ['230']
+      content-length: ['103']
       content-type: [application/json]
-      date: ['Thu, 26 Nov 2015 04:05:21 GMT']
+      date: ['Thu, 26 Nov 2015 04:27:58 GMT']
       server: [nginx/1.4.6 (Ubuntu)]
       via: [1.1 varnish]
       x-powered-by: [PHP/5.5.9-1ubuntu4.11]
-      x-varnish: ['1470654648']
-    status: {code: 400, message: Bad Request}
+      x-varnish: ['1470658646']
+    status: {code: 200, message: OK}
 version: 1

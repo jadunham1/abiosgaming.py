@@ -1,34 +1,5 @@
 interactions:
 - request:
-    body: grant_type=client_credentials&client_id=vhVlOflCSOLjMyzAd5eGM7PScyfvIM6TptTCC7Y0&client_secret=IROG0RVhB2mkIwdvoCjHJ8IOks9lDKbFXB6IeDe0
-    headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      Content-Length: ['135']
-      Content-Type: [application/x-www-form-urlencoded]
-      User-Agent: [python-requests/2.8.1]
-    method: POST
-    uri: https://api.abiosgaming.com/v1/oauth/access_token
-  response:
-    body: {string: !!python/unicode '{"access_token":"O1ER2s887M0sYa5zOf8f5TuLd4s60OYQThi5rFmh","token_type":"Bearer","expires_in":31556952}'}
-    headers:
-      accept-ranges: [bytes]
-      access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
-      access-control-allow-origin: ['*']
-      access-control-expose-headers: [Link]
-      age: ['0']
-      cache-control: [no-cache]
-      connection: [keep-alive]
-      content-length: ['103']
-      content-type: [application/json]
-      date: ['Mon, 16 Nov 2015 02:41:29 GMT']
-      server: [nginx/1.4.6 (Ubuntu)]
-      via: [1.1 varnish]
-      x-powered-by: [PHP/5.5.9-1ubuntu4.11]
-      x-varnish: ['1467459732']
-    status: {code: 200, message: OK}
-- request:
     body: null
     headers:
       Accept: ['*/*']
@@ -36,7 +7,7 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.8.1]
     method: GET
-    uri: https://api.abiosgaming.com/v1/tournaments?access_token=O1ER2s887M0sYa5zOf8f5TuLd4s60OYQThi5rFmh
+    uri: https://api.abiosgaming.com/v1/tournaments?access_token=FAKE_ACCESS_TOKEN
   response:
     body: {string: !!python/unicode '[{"id":777,"title":"Enthusiast Gaming Live Expo","start":"2016-04-29T00:00:00+0000","end":"2016-05-01T23:59:00+0000","city":"Toronto","short_title":"EGLX","url":"https:\/\/abiosgaming.com\/tournaments\/Smash\/Enthusiast-Gaming-Live-Expo","description":"The
         Enthusiast Gaming Live Expo is a follow-up of sorts to the first \"Enthusiast
@@ -54,7 +25,25 @@ interactions:
         is going to be one of the biggest eSports events in North American history.
         The Smash portion will feature a prize total of $ 33,000.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/EGLX-Large-new.jpeg","default":"https:\/\/img.abiosgaming.com\/events\/EGLX-Small-new.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/EGLX-Small-new.png"},"prizepool":{"total":"$
         33,000, $ 15,000","first":"$ 6,750","second":"$ 3,300","third":"$ 1,650"},"links":{"website":"http:\/\/eglx.ca\/","wiki":"http:\/\/wiki.teamliquid.net\/smash\/Enthusiast_Gaming_Live_Expo","youtube":"https:\/\/www.youtube.com\/watch?v=FqL_fIrcCd4"},"game":{"id":10,"title":"Smash","long_title":"Super
-        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}}},{"id":836,"title":"BEAST
+        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}}},{"id":927,"title":"MLG
+        Major Championship Columbus","start":"2016-03-29T00:00:00+0000","end":"2016-04-03T00:00:00+0000","city":"Columbus","short_title":"MLG
+        Columbus","url":"https:\/\/abiosgaming.com\/tournaments\/CS%3AGO\/MLG-Major-Championship-Columbus","description":"MLG
+        Major Championship Columbus&nbsp;tournament will feature the top eight teams
+        from North America and Europe, who will be determined through online qualifiers
+        hosted via MLG.tv. The event will be hosted at MLG Arena and Nationwide Arena
+        from March 29th to April 3, 2016 with a $ 250,000 prize pool.","short_description":"MLG
+        Major Championship Columbus is Counter-Strike: Global Offensive event with
+        a $ 250,000 prize pool.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/MLG-Major-Championship-Large.png","default":"https:\/\/img.abiosgaming.com\/events\/MLG-Major-Championship-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/MLG-Major-Championship-Small.png"},"prizepool":{"total":"$
+        250,000","first":"$ 100,000","second":"$ 50,000","third":"$ 22,000"},"links":{"website":"http:\/\/www.majorleaguegaming.com\/events\/84\/mlg-cs-go-major-championship-columbus","wiki":"http:\/\/wiki.teamliquid.net\/counterstrike\/MLG\/2016\/Columbus","youtube":"https:\/\/www.youtube.com\/user\/MajorLeagueGaming"},"game":{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
+        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}}},{"id":932,"title":"The
+        Shanghai Major","start":"2016-03-02T00:00:00+0000","end":"2016-03-06T00:00:00+0000","city":"Shanghai","short_title":"Winter
+        Major","url":"https:\/\/abiosgaming.com\/tournaments\/Dota-2\/The-Shanghai-Major","description":"The
+        second Dota Major will take place over five days at Mercedes Benz Arena&nbsp;in&nbsp;Shanghai,
+        China from March 2nd through the 6th. It will feature TBA teams all competing
+        at the main event for a total prize pool of TBA, and will be produced by ESL.&nbsp;","short_description":"
+        The second Dota Major will take place over five days at Mercedes Benz Arena
+        in Shanghai.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/The-Shanghai-Major-Large.png","default":"https:\/\/img.abiosgaming.com\/events\/The-Shanghai-Major-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/The-Shanghai-Major-Small.png"},"prizepool":{"total":"TBA","first":"TBA","second":"TBA","third":"TBA"},"links":{"website":"http:\/\/www.dota2.com\/majors\/","wiki":"","youtube":"https:\/\/www.youtube.com\/user\/dota2"},"game":{"id":1,"title":"Dota
+        2","long_title":"Defense of the Ancients 2","images":{"square":"https:\/\/img.abiosgaming.com\/games\/dota-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-dota-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-Dota-logo.jpg"}}},{"id":836,"title":"BEAST
         6","start":"2016-02-19T00:00:00+0000","end":"2016-02-21T23:59:00+0000","city":"Gothenburg","short_title":"B6","url":"https:\/\/abiosgaming.com\/tournaments\/Smash\/BEAST-6","description":"As
         one of Europe''s Premier Super Smash Bros. Tournament series, Beast returns
         for a 6th iteration. Having evolved into the much more organized Beast Tournament
@@ -79,7 +68,7 @@ interactions:
         legendary Smash premier event (Genesis 3) that sparked one of the most intense
         rivalries in Smash history is returning in January 2016.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/Genesis-3-Smash-Large.jpeg","default":"https:\/\/img.abiosgaming.com\/events\/Genesis-3-Smash-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/Genesis-3-Smash-Small.png"},"prizepool":{"total":"TBA","first":"TBA","second":"TBA","third":"TBA"},"links":{"website":"https:\/\/smash.gg\/tournament\/genesis-3","wiki":"http:\/\/wiki.teamliquid.net\/smash\/GENESIS_3","youtube":"https:\/\/www.youtube.com\/watch?v=VMCMg-ziBEc"},"game":{"id":10,"title":"Smash","long_title":"Super
         Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}}},{"id":899,"title":"The
-        Iceberg Pro League S1","start":"2015-12-20T00:00:00+0000","end":"2015-11-16T02:41:29+0000","city":"Online\/Offline","short_title":"ICPL
+        Iceberg Pro League S1","start":"2015-12-20T00:00:00+0000","end":"2015-11-26T04:03:19+0000","city":"Online\/Offline","short_title":"ICPL
         S1","url":"https:\/\/abiosgaming.com\/tournaments\/CS%3AGO\/The-Iceberg-Pro-League-S1","description":"ICPL
         Is a new league in Asia for CSGO with an $ 4,000 Prize-Pool. The Iceberg Pro
         League will be played in three stages starting with an open group stage consisting
@@ -89,7 +78,13 @@ interactions:
         Finals in Hong Kong.","short_description":"ICPL Is a new league in Asia for
         CSGO with an $ 4,000 Prize-Pool.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/Iceberg-Pro-League-Large.png","default":"https:\/\/img.abiosgaming.com\/events\/Iceberg-Pro-League-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/Iceberg-Pro-League-Small.png"},"prizepool":{"total":"$
         4,000","first":"$ 2,000","second":"$ 1,000","third":"$ 500"},"links":{"website":"","wiki":"","youtube":""},"game":{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
-        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}}},{"id":771,"title":"Ossom
+        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}}},{"id":938,"title":"2015
+        IEM Cologne","start":"2015-12-18T00:00:00+0000","end":"2015-12-21T00:00:00+0000","city":"Cologne","short_title":"IEM","url":"https:\/\/abiosgaming.com\/tournaments\/LoL\/2015-IEM-Cologne","description":"Intel
+        Extreme Masters&nbsp;Cologne is the fourth event of IEM Season X, which will
+        take place at the ESL Studios, Cologne&nbsp;","short_description":"Intel Extreme
+        Masters Cologne is the fourth event of IEM Season X, which will take place
+        at the ESL Studios, Cologne ","images":{"large":"https:\/\/img.abiosgaming.com\/events\/IEM-Intel-extreme-masters-ESL-large.jpg","default":"https:\/\/img.abiosgaming.com\/events\/IEM-Intel-extreme-masters-ESL-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/IEM-Intel-extreme-masters-ESL-small.png"},"prizepool":{"total":"TBA","first":"TBA","second":"TBA","third":"TBA"},"links":{"website":"http:\/\/en.intelextrememasters.com\/season10","wiki":"http:\/\/lol.gamepedia.com\/IEM_Season_X\/Cologne","youtube":"http:\/\/www.youtube.com\/iem"},"game":{"id":2,"title":"LoL","long_title":"League
+        of Legends","images":{"square":"https:\/\/img.abiosgaming.com\/games\/LoL-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-lol-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-lol-logo.jpg"}}},{"id":771,"title":"Ossom
         Fights 2015","start":"2015-12-11T00:00:00+0000","end":"2015-12-13T23:59:00+0000","city":"Barcelona","short_title":"Ossom","url":"https:\/\/abiosgaming.com\/tournaments\/Smash\/Ossom-Fights-2015","description":"A
         year after the latest Smash Major event in Spain, \u00d3ssom Fights 2015 is
         looking to bring back the hype of the FGC scene with a three-day event this
@@ -100,7 +95,30 @@ interactions:
         event in Spain, \u00d3ssom Fights 2015 is looking to bring back the hype of
         the FGC scene to Southern Europe.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/Ossom-Fights-2015-Large.jpeg","default":"https:\/\/img.abiosgaming.com\/events\/Ossom-Fights-2015-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/Ossom-Fights-2015-Small.png"},"prizepool":{"total":"TBD","first":"50
         %","second":"24 %","third":"12 %"},"links":{"website":"https:\/\/smash.gg\/ossom-fights","wiki":"","youtube":"https:\/\/www.youtube.com\/watch?v=sNIyaobXtK4"},"game":{"id":10,"title":"Smash","long_title":"Super
-        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}}},{"id":773,"title":"DG
+        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}}},{"id":935,"title":"2015
+        AllStar Los Angeles","start":"2015-12-10T00:00:00+0000","end":"2015-12-14T22:00:00+0000","city":"Los
+        Angeles, LCS Studio","short_title":"AstrLA","url":"https:\/\/abiosgaming.com\/tournaments\/LoL\/2015-AllStar-Los-Angeles","description":"Riot
+        Games presents the All-Star Los Angeles 2015! Here the biggest players from
+        all over the world get together to form new alliances. Two teams made up of
+        15 players in each. The players are taken from the top teams from last season''s
+        World Championships. The only exception will be the last 5 players in Team
+        Ice, who are determined at the IWC All-Star Melbourne event.The main challenge
+        of the event puts 5 players from each region to play versus another region
+        for points. The lineup coming out with the most points in the end grants their
+        entire playerregion an IP bonus.The event will last over the course of four
+        days and will also feature fun matches. These are always different, with different
+        players in each as well as different rules.","short_description":"The Los
+        Angeles All-Star 2015 brings us the top players from all regions in the LoL
+        professional scene to play a variety of matches.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/No-Logo-Tournament-Large.jpg","default":"https:\/\/img.abiosgaming.com\/events\/No-Logo-Tournament-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/No-Logo-Tournament-Small.png"},"prizepool":{"total":"IP
+        boosts.","first":"n\/a","second":"n\/a","third":"n\/a"},"links":{"website":"http:\/\/www.lolesports.com\/en_US\/all-star","wiki":"","youtube":""},"game":{"id":2,"title":"LoL","long_title":"League
+        of Legends","images":{"square":"https:\/\/img.abiosgaming.com\/games\/LoL-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-lol-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-lol-logo.jpg"}}},{"id":951,"title":"Middle
+        East and North Africa Championship","start":"2015-12-08T00:00:00+0000","end":"2015-11-26T04:03:19+0000","city":"Online","short_title":"MENA","url":"https:\/\/abiosgaming.com\/tournaments\/CS%3AGO\/Middle-East-and-North-Africa-Championship","description":"MENA
+        (Middle East and North Africa) Championship is a tournament hosted by AFKG.com.The
+        Tournament will feature thirty-two of the of the best teams from the region
+        and a $ 15,000 Prize Pool","short_description":"MENA (Middle East and North
+        Africa) Championship is a tournament hosted by AFKG.com.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/mena-championship-big.jpg","default":"https:\/\/img.abiosgaming.com\/events\/mena-championship-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/mena-championship-small.png"},"prizepool":{"total":"$
+        15,000","first":"$ 7,000","second":"$ 3,5000","third":"$ 1,500"},"links":{"website":"http:\/\/afkg.com\/","wiki":"","youtube":""},"game":{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
+        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}}},{"id":773,"title":"DG
         Winter","start":"2015-12-05T00:00:00+0000","end":"2015-12-06T23:59:00+0000","city":"Dortmund","short_title":"DGW","url":"https:\/\/abiosgaming.com\/tournaments\/Smash\/DG-Winter","description":"DG
         Winter, a new tournament IP from Donkey Gaming, is launching this December
         with a 2-Day Smash event in Dortmund, Germany, featuring Doubles and Singles
@@ -120,88 +138,39 @@ interactions:
         Arena is an offline tournament that will be held in connection to the Canadian
         Videogame Awards. ","images":{"large":"https:\/\/img.abiosgaming.com\/events\/Canadian-Videogame-Awards-cva-big.jpg","default":"https:\/\/img.abiosgaming.com\/events\/Canadian-Videogame-Awards-cva-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/Canadian-Videogame-Awards-cva-small.png"},"prizepool":{"total":"$
         20,000","first":"$ 10,000","second":"$ 5,000","third":"$ 2,500"},"links":{"website":"http:\/\/www.cvawards.ca\/northern-arena-2015\/","wiki":"http:\/\/wiki.teamliquid.net\/counterstrike\/Nothern_Arena\/2015","youtube":""},"game":{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
-        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}}},{"id":818,"title":"DreamHack
-        Winter 2015","start":"2015-11-26T00:00:00+0000","end":"2015-11-29T23:59:00+0000","city":"J\u00f6nk\u00f6ping","short_title":"DH
-        W","url":"https:\/\/abiosgaming.com\/tournaments\/Smash\/DreamHack-Winter-2015","description":"Following
-        up on the success of DreamHack London this year, Super Smash Bros. Melee is
-        coming back for round 2 at DreamHack Winter this November. Due to sub-optimal
-        planning during the London event, a large chunk of the top-tier players were
-        unable to attend. This time around, however, the all-star cast is attending
-        with the best players from all around the world looking to nab a piece of
-        the massive $ 30,000 prize pool. The prize money will be split up into two
-        separate tournaments, $ 20,000 for Singles, and $ 10,000 for Doubles.The event
-        will be held at the classic DreamHack site of Elmia in J\u00f6nk\u00f6ping,
-        Sweden, at the end of November this year.","short_description":"Following
-        up on the success of DreamHack London this year, Smash is coming back for
-        round 2 at DreamHack Winter this November.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/DH-Winter-Smash-Large.Jpeg","default":"https:\/\/img.abiosgaming.com\/events\/DH-Winter-Smash-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/DH-Winter-Smash-Small.png"},"prizepool":{"total":"$
-        30,000","first":"$ 10,000 Singles $ 5,000 Doubles","second":"$ 5,000 Singles
-        $ 2,500 Doubles","third":"$ 2,000 Singles $ 1,000 Doubles"},"links":{"website":"https:\/\/www.dreamhack.se\/dhw15\/esport\/","wiki":"http:\/\/wiki.teamliquid.net\/smash\/DreamHack_Winter_2015","youtube":"https:\/\/www.youtube.com\/user\/DreamhackMedia\/videos"},"game":{"id":10,"title":"Smash","long_title":"Super
-        Smash Bros.","images":{"square":"https:\/\/img.abiosgaming.com\/games\/ssb-smash-flat-icon-square.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-ssb-smash-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-smash-logo-v2.png"}}},{"id":894,"title":"DreamHack
-        Winter 2015","start":"2015-11-26T00:00:00+0000","end":"2015-11-28T00:00:00+0000","city":"Jonkoping","short_title":"DH
-        Winter 15","url":"https:\/\/abiosgaming.com\/tournaments\/Hearthstone\/DreamHack-Winter-2015","description":"DreamHack
-        Winter 2015 will feature an invitational including 32 of the World\u2019s
-        best Hearthstone players competing for $40,000 on November 26-28th. 24 of
-        these competitors will be directly invited to the tournament based on prior
-        results.&nbsp;The remaining 8 slots will be awarded to competitors earning
-        their slots through an online qualifier.","short_description":"DreamHack Winter
-        2015 will feature an invitational including 32 of the World\u2019s best Hearthstone
-        players competing for $40,000 in November!","images":{"large":"https:\/\/img.abiosgaming.com\/events\/DreamHack-DH-Logo-Large.jpg","default":"https:\/\/img.abiosgaming.com\/events\/DreamHack-DH-Logo-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/DreamHack-DH-Logo-Small.png"},"prizepool":{"total":"$
-        40,000","first":"$ 20,000","second":"$ 10,000","third":"$ 5,000"},"links":{"website":"http:\/\/www.dreamhack.se\/dhw15\/esport\/hearthstone\/","wiki":"http:\/\/wiki.teamliquid.net\/hearthstone\/DreamHack_2015\/Winter","youtube":"https:\/\/www.youtube.com\/user\/DreamhackMedia\/videos"},"game":{"id":6,"title":"Hearthstone","long_title":"Hearthstone","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Hearthstone-HS-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hearthstone-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hearthstone-logo.jpg"}}},{"id":870,"title":"IEM
-        San Jose","start":"2015-11-21T00:00:00+0000","end":"2015-11-23T00:00:00+0000","city":"San
-        Jose","short_title":"IEM","url":"https:\/\/abiosgaming.com\/tournaments\/CS%3AGO\/IEM-San-Jose","description":"Intel
-        Extreme Masters San Jose will take place on November 21st and 22nd at the
-        SAP Center, California. This tournament will be the first North American CSGO
-        Stadium event. Eight top teams will compete for the biggest share at the $100,000
-        prize-pool. Seven teams are invited to the tournament and the winner of the
-        IBP CSGO invitational will join them.&nbsp;","short_description":"Intel Extreme
-        Masters San Jose will take place on November 21st and 22nd at the SAP Center,
-        California. ","images":{"large":"https:\/\/img.abiosgaming.com\/events\/IEM-Intel-extreme-masters-ESL-large.jpg","default":"https:\/\/img.abiosgaming.com\/events\/IEM-Intel-extreme-masters-ESL-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/IEM-Intel-extreme-masters-ESL-small.png"},"prizepool":{"total":"$
-        100,000","first":"","second":"","third":""},"links":{"website":"http:\/\/en.intelextrememasters.com\/season10\/sanjose\/tournamentinfo\/","wiki":"","youtube":""},"game":{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
-        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}}},{"id":871,"title":"2015
-        IEM San Jose","start":"2015-11-21T00:00:00+0000","end":"2015-11-23T00:00:00+0000","city":"San
-        Jose","short_title":"IEM","url":"https:\/\/abiosgaming.com\/tournaments\/LoL\/2015-IEM-San-Jose","description":"Intel
-        Extreme Masters San Jose is the third event of IEM Season X, which will take
-        place at the SAP Center, California.&nbsp;IEM San Jose will feature 6 teams
-        of which five of the teams got voted through in their specific region, with
-        Fnatic and Origen coming from the EU Vote, Counter Logic Gaming and Team Solomid
-        coming from the NA vote, LGD Gaming coming from the CN Vote and the final
-        team to join the tournament is Jin Air Green Wings who got directly invited.","short_description":"Intel
-        Extreme Masters San Jose is the third event of IEM Season X, which will take
-        place at the SAP Center, California.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/IEM-Intel-extreme-masters-ESL-large.jpg","default":"https:\/\/img.abiosgaming.com\/events\/IEM-Intel-extreme-masters-ESL-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/IEM-Intel-extreme-masters-ESL-small.png"},"prizepool":{"total":"$
-        150,000 ","first":"TBA","second":"TBA","third":"TBA"},"links":{"website":"http:\/\/en.intelextrememasters.com\/season10\/sanjose\/tournamentinfo\/","wiki":"http:\/\/lol.gamepedia.com\/IEM_Season_X\/San_Jose","youtube":""},"game":{"id":2,"title":"LoL","long_title":"League
-        of Legends","images":{"square":"https:\/\/img.abiosgaming.com\/games\/LoL-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-lol-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-lol-logo.jpg"}}},{"id":885,"title":"Gold
-        Series 2015 Xian","start":"2015-11-21T00:00:00+0000","end":"2015-11-22T00:00:00+0000","city":"Xi''an","short_title":"Gold
-        S","url":"https:\/\/abiosgaming.com\/tournaments\/Hearthstone\/Gold-Series-2015-Xian","description":"Gold
-        Series 2015 Xi''an&nbsp;is the penultimate event of Gold Series 2015 Hearthstone
-        tournaments organized by NetEase.","short_description":"Gold Series 2015 Xi''an
-        is the penultimate event of Gold Series 2015 Hearthstone tournaments organized
-        by NetEase.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/gold-series-gs-big.jpg","default":"https:\/\/img.abiosgaming.com\/events\/gold-series-gs-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/gold-series-gs-small.png"},"prizepool":{"total":"$
-        16,890","first":"$ 7,860","second":"$ 1,570","third":"$ 1,260"},"links":{"website":"http:\/\/gold.163.com\/home\/","wiki":"http:\/\/wiki.teamliquid.net\/hearthstone\/Gold_Series_2015\/Xi%27an","youtube":""},"game":{"id":6,"title":"Hearthstone","long_title":"Hearthstone","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Hearthstone-HS-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hearthstone-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hearthstone-logo.jpg"}}},{"id":829,"title":"AlienTech
-        AllStars","start":"2015-11-20T00:00:00+0000","end":"2015-11-22T00:00:00+0000","city":"Porto","short_title":"ATAS","url":"https:\/\/abiosgaming.com\/tournaments\/CS%3AGO\/AlienTech-AllStars","description":"Alientech
-        is back with a new tournament called the AlienTech AllStars featuring a \u20ac6,000.
-        This tournament will be played offline at Shopping Cidade do Porto from November
-        20-22. The tournament will consist of ten Portuguese teams who will be joined
-        by six foreign sides.&nbsp;","short_description":"Alientech is back with a
-        new tournament called the AlienTech AllStars featuring a \u20ac6,000.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/alientech-allstars-AtAS-big.jpg","default":"https:\/\/img.abiosgaming.com\/events\/alientech-allstars-AtAS-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/alientech-allstars-AtAS-small.png"},"prizepool":{"total":"\u20ac6,000","first":"\u20ac
-        3,500","second":"\u20ac 1,500","third":"\u20ac 750"},"links":{"website":"http:\/\/www.teamalientech.com\/site\/index.php?site=news","wiki":"","youtube":""},"game":{"id":5,"title":"CS:GO","long_title":"Counter-Strike:
-        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}}},{"id":904,"title":"2015
-        Gamegune","start":"2015-11-20T00:00:00+0000","end":"2015-11-22T00:00:00+0000","city":"Offline","short_title":"Gamegune","url":"https:\/\/abiosgaming.com\/tournaments\/Hearthstone\/2015-Gamegune","description":"Gamegune
-        2015 is an offline event and the venue this year will be the Guggenheim Museum
-        Bilbao and one of the most interesting competitions of 2015, HearthStone,
-        will be in centre stage.","short_description":"Gamegune 2015 is an offline
-        Hearthstone event with $ 26,834 prize purse. ","images":{"large":"https:\/\/img.abiosgaming.com\/events\/Gamegune-Event-Large.png","default":"https:\/\/img.abiosgaming.com\/events\/Gamegune-Event-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/Gamegune-Event-Small.png"},"prizepool":{"total":"$
-        26,834","first":"$ 12,890","second":"$ 6,445","third":"$ 3,222"},"links":{"website":"http:\/\/gamegune.org\/hearthstone","wiki":"http:\/\/wiki.teamliquid.net\/hearthstone\/Gamegune","youtube":""},"game":{"id":6,"title":"Hearthstone","long_title":"Hearthstone","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Hearthstone-HS-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hearthstone-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hearthstone-logo.jpg"}}},{"id":886,"title":"Nation
-        Wars III","start":"2015-11-19T00:00:00+0000","end":"2015-12-03T00:00:00+0000","city":"Online","short_title":"Nation","url":"https:\/\/abiosgaming.com\/tournaments\/SCII\/Nation-Wars-III","description":"The
-        third edition of Nation Wars is here.&nbsp;Nation Wars is a tournament where
-        pro players each participating country form teams and battle to find out who
-        is the worldwide best nation on Legacy of the Void?Nation Wars III will feature
-        a&nbsp;starting Prize Pool of $ 15 000 and will be increased by 50% of each
-        net donations throughout the tournament on the French and English streams.O\u2019Gaming
-        TV is a famous French Web TV made up of the most active casters in France.","short_description":"Nation
-        wars is a tournament where pro players from each participating country form
-        teams and battle for a minimum Prize Pool of $ 15,000!","images":{"large":"https:\/\/img.abiosgaming.com\/events\/nation-wars-iii-3-nw3-big.jpg","default":"https:\/\/img.abiosgaming.com\/events\/nation-wars-iii-3-nw3-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/nation-wars-iii-3-nw3-small.png"},"prizepool":{"total":"$
-        15,000+","first":"50%","second":"25%","third":"15%"},"links":{"website":"http:\/\/nationwars.ogaming.tv\/0ms\/#!\/en\/sc2","wiki":"http:\/\/wiki.teamliquid.net\/starcraft2\/NationWars_III","youtube":"https:\/\/www.youtube.com\/user\/SC2OGTV"},"game":{"id":3,"title":"SCII","long_title":"StarCraft
-        II","images":{"square":"https:\/\/img.abiosgaming.com\/games\/SCII-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-sc2-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-SCII-logo.jpg"}}}]'}
+        Global Offensive","images":{"square":"https:\/\/img.abiosgaming.com\/games\/CSGO-flat-game-icon.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-cs-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-cs-go-logo.jpg"}}},{"id":929,"title":"Call
+        of Duty World League","start":"2015-12-04T00:00:00+0000","end":"2015-11-26T04:03:19+0000","city":"Online\/Offline","short_title":"CoD
+        World Laegue","url":"https:\/\/abiosgaming.com\/tournaments\/CoD\/Call-of-Duty-World-League","description":"Call
+        of Duty World League is a worldwide esports league operated by Activision.
+        This league will provide regular competition for the very best in North America,
+        Europe, and Australia &amp; New Zealand. The year will culminate with Call
+        of Duty Championship 2016, which will take place in the fall of 2016. Added
+        up, the prize offerings in the season will total more than $ 3,000,000.&nbsp;","short_description":"Call
+        of Duty World League is a worldwide esports league operated by Activision.
+        ","images":{"large":"https:\/\/img.abiosgaming.com\/events\/call-of-duty-world-league-large.png","default":"https:\/\/img.abiosgaming.com\/events\/call-of-duty-world-league-small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/call-of-duty-world-league-small.png"},"prizepool":{"total":"$
+        3,000,000","first":"TBA","second":"TBA","third":"TBA"},"links":{"website":"https:\/\/www.callofduty.com\/esports\/world-league","wiki":"http:\/\/cod.esportspedia.com\/wiki\/Call_of_Duty_World_League","youtube":"https:\/\/www.youtube.com\/user\/CALLOFDUTY\/playlists"},"game":{"id":11,"title":"CoD","long_title":"Call
+        of Duty","images":{"square":"https:\/\/img.abiosgaming.com\/games\/square-flat-call-of-duty-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/flat-round-call-of-duty-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/thin-flat-cod-logo-v2.png"}}},{"id":948,"title":"Heroes
+        Rising","start":"2015-12-04T00:00:00+0000","end":"2015-11-26T04:03:19+0000","city":"Online\/Offline","short_title":"Heroes
+        Rising","url":"https:\/\/abiosgaming.com\/tournaments\/HotS\/Heroes-Rising","description":"Esports
+        Arena is hosting the first Heroes of the Storm event called Heroes Rising.&nbsp;The
+        main event will take place January 8-10, live at Esports Arena. The prize
+        pool begins at $1 0,000 but will be increased by %70 of all the money they
+        make over $ 10,000.","short_description":"Esports Arena is hosting the first
+        Heroes of the Storm event called Heroes Rising with a crowd funded $ 10,000
+        prize pool.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/Heroes-Rising-Large.png","default":"https:\/\/img.abiosgaming.com\/events\/Heroes-Rising-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/Heroes-Rising-Small.png"},"prizepool":{"total":"$
+        10,000+","first":"TBA","second":"TBA","third":"TBA"},"links":{"website":"http:\/\/heroesrising.gg\/","wiki":"","youtube":"https:\/\/www.youtube.com\/channel\/UCSsblrs7F2JqnApZhTOPL6Q"},"game":{"id":9,"title":"HotS","long_title":"Heroes
+        of the Storm","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Heroes-of-the-Storm-Logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hots-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hots-logo.jpg"}}},{"id":946,"title":"SL
+        i League StarSeries","start":"2015-12-01T00:00:00+0000","end":"2015-11-26T04:03:19+0000","city":"Online\/Offline","short_title":"SL
+        i League","url":"https:\/\/abiosgaming.com\/tournaments\/Hearthstone\/SL-i-League-StarSeries","description":"The
+        SL i-League StarSeries season will see the strongest Hearthstone players from
+        all around the world battle it out in exciting competition. The tournament
+        will be divided into two divisions. The first division will bring together
+        players from Europe, Asia, the CIS and the Americas, while the second division
+        will be reserved exclusively for pro players from China. The prize pool will
+        amount to $ 50,000, and will be distributed among the eight finalists.","short_description":"The
+        SL i-League StarSeries season will see the strongest Hearthstone players from
+        all around the world battle it for $ 50,000.","images":{"large":"https:\/\/img.abiosgaming.com\/events\/BluFlame-hearthstone-cup-large.jpeg","default":"https:\/\/img.abiosgaming.com\/events\/SL-i-League-StarSeries-Small.png","thumbnail":"https:\/\/img.abiosgaming.com\/events\/thumbnails\/SL-i-League-StarSeries-Small.png"},"prizepool":{"total":"$
+        50,000","first":"$ 20,000","second":"$ 12,000","third":"$ 5,000"},"links":{"website":"http:\/\/hs.starladder.tv\/","wiki":"","youtube":"https:\/\/www.youtube.com\/channel\/UCBg1GqObYXuJToLXok_xQAg"},"game":{"id":6,"title":"Hearthstone","long_title":"Hearthstone","images":{"square":"https:\/\/img.abiosgaming.com\/games\/Hearthstone-HS-logo.png","circle":"https:\/\/img.abiosgaming.com\/games\/round-hearthstone-logo.png","rectangle":"https:\/\/img.abiosgaming.com\/games\/flat-rectangular-hearthstone-logo.jpg"}}}]'}
     headers:
       accept-ranges: [bytes]
       access-control-allow-methods: ['GET, POST, PUT, OPTIONS, DELETE']
@@ -210,16 +179,16 @@ interactions:
       age: ['0']
       cache-control: ['max-age=300, public']
       connection: [keep-alive]
-      content-length: ['24169']
+      content-length: ['23881']
       content-type: [application/json]
-      date: ['Mon, 16 Nov 2015 02:41:29 GMT']
-      link: ['<http://api.abiosgaming.com/v1/tournaments/?access_token=O1ER2s887M0sYa5zOf8f5TuLd4s60OYQThi5rFmh&order=start&sort=DESC&page=1>;
-          rel="first", <>; rel="prev", <http://api.abiosgaming.com/v1/tournaments/?access_token=O1ER2s887M0sYa5zOf8f5TuLd4s60OYQThi5rFmh&order=start&sort=DESC&page=2>;
-          rel="next", <http://api.abiosgaming.com/v1/tournaments/?access_token=O1ER2s887M0sYa5zOf8f5TuLd4s60OYQThi5rFmh&order=start&sort=DESC&page=56>;
+      date: ['Thu, 26 Nov 2015 04:03:19 GMT']
+      link: ['<http://api.abiosgaming.com/v1/tournaments/?access_token=FAKE_ACCESS_TOKEN&order=start&sort=DESC&page=1>;
+          rel="first", <>; rel="prev", <http://api.abiosgaming.com/v1/tournaments/?access_token=FAKE_ACCESS_TOKEN&order=start&sort=DESC&page=2>;
+          rel="next", <http://api.abiosgaming.com/v1/tournaments/?access_token=FAKE_ACCESS_TOKEN&order=start&sort=DESC&page=58>;
           rel="last"']
       server: [nginx/1.4.6 (Ubuntu)]
       via: [1.1 varnish]
       x-powered-by: [PHP/5.5.9-1ubuntu4.11]
-      x-varnish: ['1467459734']
+      x-varnish: ['1908500745']
     status: {code: 200, message: OK}
 version: 1

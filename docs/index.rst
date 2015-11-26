@@ -36,6 +36,7 @@ Modules
 .. toctree::
     :maxdepth: 1
 
+    client
     utils
 
 Indices and tables

@@ -7,23 +7,21 @@ from .exceptions import PaginationNotFound
 from .utils import named_tuple
 
 DEFAULT_ENDPOINT = 'https://api.abiosgaming.com'
-DEFAULT_VERSION = 'v1'
 
 
 class BaseAbiosClient(object):
-    def __init__(self, retries=3, client_id=None, secret=None):
-        self._endpoint = DEFAULT_ENDPOINT
+    def __init__(self, retries=3, client_id=None, secret=None, access_token=None, endpoint=DEFAULT_ENDPOINT):
+        self._endpoint = endpoint
         self.session = requests.Session()
         retry = Retry(
             total=retries,
-            status_forcelist=[500],
+            status_forcelist=[500, 401],
             method_whitelist= frozenset(['POST', 'GET', 'PUT']),
             backoff_factor=1
         )
-        logging.debug("retryable {}".format(retry.is_forced_retry('post', 500)))
         adapter = HTTPAdapter(max_retries=retry)
         self.session.mount(self._endpoint, adapter)
-        self._access_token = None
+        self._access_token = access_token
         self._client_id = client_id
         self._secret = secret
 
@@ -82,8 +80,6 @@ class BaseAbiosClient(object):
         return post_data
 
     def get_credential_set(self):
-        self._client_id = 'vhVlOflCSOLjMyzAd5eGM7PScyfvIM6TptTCC7Y0'
-        self._secret = 'IROG0RVhB2mkIwdvoCjHJ8IOks9lDKbFXB6IeDe0'
         return (self._client_id, self._secret)
 
     """
@@ -131,16 +127,16 @@ class BaseAbiosClient(object):
             logging.exception(e)
             raise e
 
-        if(response.links["next"]["url"]):
-            logging.debug("adding next_page: {}".format(response.links["next"]))
-            self.next_page = response.links["next"]["url"]
-
         logging.debug(response.links["next"]["url"])
         try:
             response.raise_for_status()  # this will raise on 4xx and 5xxs
         except HTTPError as e:
             logging.exception(e)
             raise e
+
+        if(response.links["next"]["url"]):
+            logging.debug("adding next_page: {}".format(response.links["next"]))
+            self.next_page = response.links["next"]["url"]
 
         return [named_tuple(item) for item in response.json()]
 

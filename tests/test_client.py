@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.DEBUG)
 class AbiosClientTestCase(VCRTestCase):
     def setUp(self):
         super(AbiosClientTestCase, self).setUp()
-        self.client = AbiosClient()
+        self.client = AbiosClient(access_token='FAKE_ACCESS_TOKEN')
 
     def test_get_upcoming_matches(self):
         matches = self.client.get_upcoming_matches()
@@ -43,8 +43,8 @@ class AbiosClientTestCase(VCRTestCase):
         assert isinstance(self.client.next_page, str)
 
     def test_large_fetch_matches(self):
-        matches = self.client.get_upcoming_matches(count=50)
-        assert len(matches) == 50
+        matches = self.client.get_upcoming_matches(count=31)
+        assert len(matches) == 31
 
     def test_400s_from_auth(self):
         self.assertRaises(HTTPError, self.client.refresh_access_token)
@@ -57,3 +57,7 @@ class AbiosClientTestCase(VCRTestCase):
 
     def test_500s_from_games(self):
         self.assertRaises(RetryError, self.client.get_games)
+
+    def test_get_access_token(self):
+        self.client._access_token = None
+        self.client.access_token
