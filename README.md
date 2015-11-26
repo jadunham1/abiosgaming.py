@@ -1,6 +1,14 @@
 # abiosgaming.py
 Python Library to interact with the abiosgaming.com API
 
+# Installation
+pip install abiosgaming.py
+
+# Usage
+
+Read the docs: 
+http://abiosgamingpy.readthedocs.org
+
 You can instantiate a client in two ways.
 
 from abiosgaming.client import AbiosClient
