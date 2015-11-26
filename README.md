@@ -4,6 +4,7 @@ Python Library to interact with the abiosgaming.com API
 You can instantiate a client in two ways.
 
 from abiosgaming.client import AbiosClient
+
 client = AbiosClient(username='user', password='pass')
 
 -- or if you have an access token already you can instantiate a client with it
