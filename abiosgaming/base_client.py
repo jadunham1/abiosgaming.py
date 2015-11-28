@@ -127,7 +127,6 @@ class BaseAbiosClient(object):
             logging.exception(e)
             raise e
 
-        logging.debug(response.links["next"]["url"])
         try:
             response.raise_for_status()  # this will raise on 4xx and 5xxs
         except HTTPError as e:
