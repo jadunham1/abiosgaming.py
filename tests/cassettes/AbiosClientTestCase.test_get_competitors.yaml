@@ -7,7 +7,7 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.8.1]
     method: GET
-    uri: https://api.abiosgaming.com/v1/competitors?access_token=FAKE_ACCESS_TOKEN
+    uri: https://api.abiosgaming.com/v1/competitors?sort=ASC&access_token=FAKE_ACCESS_TOKEN
   response:
     body: {string: !!python/unicode '[{"id":8959,"name":" EHOME.Luminous","country":{"name":"China","short_name":"CN","images":{"default":"https:\/\/img.abiosgaming.com\/flags\/China.png","thumbnail":"https:\/\/img.abiosgaming.com\/flags\/thumbnails\/China.png"}},"short_name":"EHOME.L","images":{"default":"https:\/\/img.abiosgaming.com\/competitors\/EHOME.png","thumbnail":"https:\/\/img.abiosgaming.com\/competitors\/thumbnails\/EHOME.png"},"race":null},{"id":9260,"name":"
         gamENERGY","country":{"name":"Poland","short_name":"PL","images":{"default":"https:\/\/img.abiosgaming.com\/flags\/Poland.png","thumbnail":"https:\/\/img.abiosgaming.com\/flags\/thumbnails\/Poland.png"}},"short_name":"gamE","images":{"default":"https:\/\/img.abiosgaming.com\/competitors\/unknown-5.png","thumbnail":"https:\/\/img.abiosgaming.com\/competitors\/thumbnails\/unknown-5.png"},"race":null},{"id":5901,"name":"
@@ -35,14 +35,14 @@ interactions:
       connection: [keep-alive]
       content-length: ['7038']
       content-type: [application/json]
-      date: ['Thu, 26 Nov 2015 04:03:15 GMT']
-      link: ['<http://api.abiosgaming.com/v1/competitors/?access_token=FAKE_ACCESS_TOKEN&order=name&sort=ASC&page=1>;
-          rel="first", <>; rel="prev", <http://api.abiosgaming.com/v1/competitors/?access_token=FAKE_ACCESS_TOKEN&order=name&sort=ASC&page=2>;
-          rel="next", <http://api.abiosgaming.com/v1/competitors/?access_token=FAKE_ACCESS_TOKEN&order=name&sort=ASC&page=586>;
+      date: ['Sat, 28 Nov 2015 18:59:39 GMT']
+      link: ['<http://api.abiosgaming.com/v1/competitors/?access_token=FAKE&order=name&sort=ASC&page=1>;
+          rel="first", <>; rel="prev", <http://api.abiosgaming.com/v1/competitors/?access_token=FAKe&order=name&sort=ASC&page=2>;
+          rel="next", <http://api.abiosgaming.com/v1/competitors/?access_token=FAKE&order=name&sort=ASC&page=594>;
           rel="last"']
       server: [nginx/1.4.6 (Ubuntu)]
       via: [1.1 varnish]
       x-powered-by: [PHP/5.5.9-1ubuntu4.11]
-      x-varnish: ['1908500732']
+      x-varnish: ['1471598975']
     status: {code: 200, message: OK}
 version: 1
