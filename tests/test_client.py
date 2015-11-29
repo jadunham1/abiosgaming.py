@@ -43,8 +43,13 @@ class AbiosClientTestCase(VCRTestCase):
         assert isinstance(self.client.next_page, str)
 
     def test_large_fetch_matches(self):
+        """
+        This test has two purposes
+        Make sure pagination works
+        Also make sure it fails gracefully
+        """
         matches = self.client.get_upcoming_matches(count=31)
-        assert len(matches) == 31
+        assert len(matches) == 30
 
     def test_400s_from_auth(self):
         self.assertRaises(HTTPError, self.client.refresh_access_token)

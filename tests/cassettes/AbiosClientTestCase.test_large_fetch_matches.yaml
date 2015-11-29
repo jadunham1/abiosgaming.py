@@ -79,9 +79,6 @@ interactions:
       content-type: [application/json]
       date: ['Thu, 26 Nov 2015 04:10:55 GMT']
       link: ['<http://api.abiosgaming.com/v1/matches/?access_token=FAKE_ACCESS_TOKEN&order=start&sort=ASC&starts_after=now&page=1>;
-          rel="first", <http://api.abiosgaming.com/v1/matches/?access_token=FAKE_ACCESS_TOKEN&order=start&sort=ASC&starts_after=now&page=1>;
-          rel="prev", <http://api.abiosgaming.com/v1/matches/?access_token=FAKE_ACCESS_TOKEN&order=start&sort=ASC&starts_after=now&page=3>;
-          rel="next", <http://api.abiosgaming.com/v1/matches/?access_token=FAKE_ACCESS_TOKEN&order=start&sort=ASC&starts_after=now&page=20>;
           rel="last"']
       server: [nginx/1.4.6 (Ubuntu)]
       via: [1.1 varnish]

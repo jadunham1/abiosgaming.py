@@ -130,7 +130,7 @@ class BaseAbiosClient(object):
             logging.exception(e)
             raise e
 
-        if(response.links["next"]["url"]):
+        if('next' in response.links):
             logging.debug("adding next_page: {}".format(response.links["next"]))
             self.next_page = response.links["next"]["url"]
 
