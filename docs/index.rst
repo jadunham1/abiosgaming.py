@@ -13,7 +13,7 @@ Using the client to get matches::
 
     from abiosgaming.client import AbiosClient
 
-    client = AbiosClient()
+    client = AbiosClient(client_id=<clientid>, secret=<secret>)
 
     games = client.get_games()
     matches = client.get_matches()
