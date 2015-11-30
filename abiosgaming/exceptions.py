@@ -3,3 +3,6 @@ class AbiosError(Exception):
 
 class PaginationNotFound(AbiosError):
     pass
+
+class NoMatchupFound(AbiosError):
+    pass

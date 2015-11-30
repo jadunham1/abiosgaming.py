@@ -134,7 +134,7 @@ class BaseAbiosClient(object):
             logging.debug("adding next_page: {}".format(response.links["next"]))
             self.next_page = response.links["next"]["url"]
 
-        return [named_tuple(item) for item in response.json()]
+        return response.json()
 
     def _get_next_page(self):
         if(self.next_page):
@@ -175,7 +175,7 @@ class BaseAbiosClient(object):
                 break
             logging.debug("Data size is now {}".format(len(data)))
         self.pagination_remainder = data[item_count:]
-        return [named_tuple(item) for item in data[:item_count]]
+        return data[:item_count]
 
     def _get_matches(self, parameters, count=3):
         path = ['v1', 'matches']

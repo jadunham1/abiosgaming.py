@@ -1,4 +1,5 @@
 from .base_client import BaseAbiosClient
+from .match import Match
 
 DEFAULT_NUM_ITEMS = 3
 
@@ -6,6 +7,25 @@ class AbiosClient(BaseAbiosClient):
     """
     Simple client for interacting with the AbiosGaming API
     """
+    def get_matches(
+            self, count=DEFAULT_NUM_ITEMS, addons=[],
+            games=[], competitors=[],
+            tournaments=[], substages=[],
+            order=None, sort=None, starts_after=None, 
+            starts_before=None, ends_after=None, ends_before=None):
+        return [Match(data) for data in self._get_matches({"with[]": addons,
+                                  "games[]": games,
+                                  "competitors[]": competitors,
+                                  "tournaments[]": tournaments,
+                                  "substages[]": substages,
+                                  "starts_after": starts_after,
+                                  "starts_before": starts_before,
+                                  "ends_after": ends_after,
+                                  "ends_before": ends_before,
+                                  "sort": sort},
+                                  count=count)]
+
+
     def get_upcoming_matches(
             self, count=DEFAULT_NUM_ITEMS, addons=[],
             games=[], competitors=[],
@@ -24,14 +44,15 @@ class AbiosClient(BaseAbiosClient):
         :param str order: (optional), the parameter by which you want to order the matches (start or end). Default start.
         :param str sort: (optional), the order in which items are sorted (ASC or DESC).  Default ASC
         """
-        return self._get_matches({"with[]": addons,
-                                  "games[]": games,
-                                  "competitors[]": competitors,
-                                  "tournaments[]": tournaments,
-                                  "substages[]": substages,
-                                  "starts_after": "now",
-                                  "sort": sort},
-                                  count=count)
+        return self.get_matches(count=count,
+                                addons=addons,
+                                games=games,
+                                competitors=competitors,
+                                tournaments=tournaments,
+                                substages=substages,
+                                order=order,
+                                sort=sort,
+                                starts_after='now')
 
     def get_current_matches(
             self, count=DEFAULT_NUM_ITEMS, addons=[],
