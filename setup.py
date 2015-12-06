@@ -11,6 +11,18 @@ packages = [
     "abiosgaming",
 ]
 
+__version__ = ''
+with open('abiosgaming/__about__.py', 'r') as fd:
+    reg = re.compile(r'__version__ = [\'"]([^\'"]*)[\'"]')
+    for line in fd:
+        m = reg.match(line)
+        if m:
+            __version__ = m.group(1)
+            break
+
+if not __version__:
+    raise RuntimeError('Cannot find version information')
+
 class PyTest(TestCommand):
     user_options = [('pytest-args=', 'a', "Arguments to pass to py.test")]
 
@@ -34,7 +46,7 @@ setup(
     description = 'Client for interacting with the AbiosGaming API',
     author = 'Jeff Dunham',
     author_email = 'jeffrey.a.dunham@gmail.com',
-    version = "0.2",
+    version = __version__,
     packages = packages,
     setup_requires=[
         'pytest-runner',
