@@ -11,7 +11,7 @@ class AbiosClient(BaseAbiosClient):
             self, count=DEFAULT_NUM_ITEMS, addons=[],
             games=[], competitors=[],
             tournaments=[], substages=[],
-            order=None, sort=None, starts_after=None, 
+            order=None, sort=None, starts_after=None,
             starts_before=None, ends_after=None, ends_before=None):
         return [Match(data) for data in self._get_matches({"with[]": addons,
                                   "games[]": games,
@@ -53,6 +53,35 @@ class AbiosClient(BaseAbiosClient):
                                 order=order,
                                 sort=sort,
                                 starts_after='now')
+
+
+    def get_recent_results(
+            self, count=DEFAULT_NUM_ITEMS, addons=[],
+            games=[], competitors=[],
+            tournaments=[], substages=[],
+            order='end', sort='DESC'):
+        """
+        Gets recent results from AbiosGaming API
+        Upcoming matches are matches which have not started yet, but do have a start date
+
+        :param int count: (optional), number of matches to retrieve Default: 3
+        :param list(str) str addons: (optional), addons to information you want for the matches i.e. tournaments, matchups
+        :param list(int) int games: (optional), id of games to retrieve
+        :param list(int) int competitors: (optional), id for competitors
+        :param list(int) int tournaments: (optional), id for tournament
+        :param list(int) int substages: (optional), id of substage of a tournament
+        :param str order: (optional), the parameter by which you want to order the matches (start or end). Default end.
+        :param str sort: (optional), the order in which items are sorted (ASC or DESC).  Default DESC
+        """
+        return self.get_matches(count=count,
+                                addons=addons,
+                                games=games,
+                                competitors=competitors,
+                                tournaments=tournaments,
+                                substages=substages,
+                                order=order,
+                                sort=sort,
+                                ends_before='now')
 
     def get_current_matches(
             self, count=DEFAULT_NUM_ITEMS, addons=[],

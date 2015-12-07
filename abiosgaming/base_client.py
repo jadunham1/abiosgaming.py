@@ -8,6 +8,7 @@ from .utils import named_tuple
 
 DEFAULT_ENDPOINT = 'https://api.abiosgaming.com'
 
+log = logging.getLogger(__name__)
 
 class BaseAbiosClient(object):
     def __init__(self, retries=3, client_id=None, secret=None, access_token=None, endpoint=DEFAULT_ENDPOINT):
@@ -32,7 +33,7 @@ class BaseAbiosClient(object):
         If there isn't one cached we should go fetch a new one
         """
         if not self._access_token:
-            logging.debug("Refreshing access token")
+            log.debug("Refreshing access token")
             self._access_token = self.refresh_access_token()
 
         return self._access_token
@@ -46,7 +47,7 @@ class BaseAbiosClient(object):
 
     @next_page.setter
     def next_page(self, value):
-        logging.debug("Setting value of next_page to {}".format(value))
+        log.debug("Setting value of next_page to {}".format(value))
         self._next_page = value
 
     @next_page.deleter
@@ -94,13 +95,13 @@ class BaseAbiosClient(object):
                                          data=data,
                                          verify=True)
         except RetryError as e:
-            logging.exception(e)
+            log.exception(e)
             raise e
 
         try:
             response.raise_for_status()
         except HTTPError as e:
-            logging.exception(e)
+            log.exception(e)
             raise e
         return response.json()
 
@@ -121,24 +122,24 @@ class BaseAbiosClient(object):
                                         params=parameters,
                                         verify=True)
         except RetryError as e:
-            logging.exception(e)
+            log.exception(e)
             raise e
 
         try:
             response.raise_for_status()  # this will raise on 4xx and 5xxs
         except HTTPError as e:
-            logging.exception(e)
+            log.exception(e)
             raise e
 
         if('next' in response.links):
-            logging.debug("adding next_page: {}".format(response.links["next"]))
+            log.debug("adding next_page: {}".format(response.links["next"]))
             self.next_page = response.links["next"]["url"]
 
         return response.json()
 
     def _get_next_page(self):
         if(self.next_page):
-            logging.debug("Calling the next URL: {}".format(self.next_page))
+            log.debug("Calling the next URL: {}".format(self.next_page))
             return self._call(self.next_page)
         raise PaginationNotFound
 

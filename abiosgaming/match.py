@@ -29,9 +29,9 @@ class Match:
         return self._raw_data['bestOf']
 
     @property
-    def matchup(self):
+    def matchups(self):
         try:
-            self._raw_data['matchup']
+            return self._raw_data['matchups']
         except KeyError:
             raise NoMatchupFound
 
